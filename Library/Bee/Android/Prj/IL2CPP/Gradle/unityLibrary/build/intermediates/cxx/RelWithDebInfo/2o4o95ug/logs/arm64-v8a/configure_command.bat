@@ -1,0 +1,20 @@
+@echo off
+"D:\\UnityVersion\\6000.0.21f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\cmake.exe" ^
+  "-HD:\\UnityProjects\\Homework0\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\src\\main\\cpp" ^
+  "-DCMAKE_SYSTEM_NAME=Android" ^
+  "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON" ^
+  "-DCMAKE_SYSTEM_VERSION=23" ^
+  "-DANDROID_PLATFORM=android-23" ^
+  "-DANDROID_ABI=arm64-v8a" ^
+  "-DCMAKE_ANDROID_ARCH_ABI=arm64-v8a" ^
+  "-DANDROID_NDK=D:\\UnityVersion\\6000.0.21f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\NDK" ^
+  "-DCMAKE_ANDROID_NDK=D:\\UnityVersion\\6000.0.21f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\NDK" ^
+  "-DCMAKE_TOOLCHAIN_FILE=D:\\UnityVersion\\6000.0.21f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\NDK\\build\\cmake\\android.toolchain.cmake" ^
+  "-DCMAKE_MAKE_PROGRAM=D:\\UnityVersion\\6000.0.21f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe" ^
+  "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=D:\\UnityProjects\\Homework0\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\2o4o95ug\\obj\\arm64-v8a" ^
+  "-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=D:\\UnityProjects\\Homework0\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\2o4o95ug\\obj\\arm64-v8a" ^
+  "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ^
+  "-DCMAKE_FIND_ROOT_PATH=D:\\UnityProjects\\Homework0\\.utmp\\RelWithDebInfo\\2o4o95ug\\prefab\\arm64-v8a\\prefab" ^
+  "-BD:\\UnityProjects\\Homework0\\.utmp\\RelWithDebInfo\\2o4o95ug\\arm64-v8a" ^
+  -GNinja ^
+  "-DANDROID_STL=c++_shared"
