@@ -43,7 +43,7 @@ public class EnemyManager : MonoBehaviour
     private void Spawn()
     {
         gameObject.layer = 7;
-        float x = UnityEngine.Random.Range(-10, 10.1f);
+        float x = UnityEngine.Random.Range(-10, 10.0f);
         float y = Mathf.Pow(100 - Mathf.Pow(x, 2), 0.5f);
         int minus = UnityEngine.Random.Range(0, 2);
         y *= Mathf.Pow(-1, minus);

@@ -25,16 +25,23 @@ public class PlayManager : MonoBehaviour
     public ObjectPool<GameObject> spawnPool;
     public ObjectPool<GameObject> boxPool;
 
+    [SerializeField]
+    private GameObject background;
+    [SerializeField]
+    private GameObject itemReceiveMenu;
+    [SerializeField]
+    private GameObject pauseMenu;
+
     private void Start()
     {
         database = Database.instance;
         spawnPool = new ObjectPool<GameObject>(Spawn, Respawn, Release);
-        boxPool = new ObjectPool<GameObject>(DropBox, ReDropBox, ReleaseBox);
+        boxPool = new ObjectPool<GameObject>(DropBox, Respawn, Release);
     }
 
     void Update()
     {
-        originSpawnCount = 10 + (int)currentTime;
+        originSpawnCount = 10 + (int)currentTime / 10;
         currentTime += Time.deltaTime;
         timer.text = ((int)currentTime / 60).ToString("D2") + ":" + ((int)currentTime % 60).ToString("D2");
         if (currentSpawnCount < originSpawnCount)
@@ -50,11 +57,12 @@ public class PlayManager : MonoBehaviour
             database.stage++;
         }
 
-        float dropBox = Random.Range(0, 100);
-        if (dropBox <= 0.01f)
+        float dropBox = Random.Range(0, 1000);
+        Debug.Log(dropBox);
+        if (dropBox <= 0f)
         {
             GameObject box = boxPool.Get();
-            box.transform.position = new Vector2(Random.Range(-100, 100.0f), Random.Range(-100, 100.0f));
+            box.transform.position = new Vector2(Random.Range(-50, 50.0f), Random.Range(-50, 50.0f));
         }
     }
 
@@ -104,14 +112,31 @@ public class PlayManager : MonoBehaviour
         return Instantiate(go);
     }
 
-    public void ReleaseBox(GameObject go)
+    #endregion
+
+    public void TurnOnItemReceiveUI()
     {
-        go.SetActive(false);
+
+        TurnOnBackground();
     }
 
-    public void ReDropBox(GameObject go)
+    public void TurnOnPauseMenu()
     {
-        go.SetActive(true);
+        pauseMenu.SetActive(true);
+        TurnOnBackground();
     }
-    #endregion
+
+    public void TurnOnBackground()
+    {
+        background.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void TurnOffBackground()
+    {
+        itemReceiveMenu.SetActive(false);
+        pauseMenu.SetActive(true);
+        background.SetActive(false);
+        Time.timeScale = 1f;
+    }
 }
