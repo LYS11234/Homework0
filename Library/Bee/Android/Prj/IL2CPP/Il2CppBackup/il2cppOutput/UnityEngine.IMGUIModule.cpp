@@ -173,6 +173,7 @@ struct TextElementInfoU5BU5D_tEC28C9B72883EE21AA798913497C69E179A15C4E;
 struct TextGenerationSettingsU5BU5D_t704B9CF75AE18D52BBB4D6C4F90E26D456DEF646;
 struct TextGeneratorU5BU5D_t840858C0E634690569F2445016C52BA3D4A2BE46;
 struct TextInfoU5BU5D_tE18061C3D6F2431FE14749A05930922C1EAB2320;
+struct TextSpanU5BU5D_t5E3335EA0DC1E9CAE42ABA23B1BB679078C9BF1C;
 struct Texture2DU5BU5D_t05332F1E3F7D4493E304C702201F9BE4F9236191;
 struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
 struct UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA;
@@ -538,6 +539,7 @@ struct RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5_marshaled_com;;
 struct RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5_marshaled_pinvoke;
 struct RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5_marshaled_pinvoke;;
 struct TextCoreVertex_t012334F340F916622ED5237971E8BA32198060E4;
+struct TextSpan_tD088342260A71C10DC0840BCA5D5E28139BA4219;
 struct Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7;
 struct Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2;
 struct Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3;
@@ -1833,15 +1835,16 @@ struct NativeTextGenerationSettings_t2F77A4671666C1EB65AADCE42D64244F0168A62A
 	String_t* ___text;
 	int32_t ___screenWidth;
 	int32_t ___screenHeight;
-	int32_t ___fontSize;
 	int32_t ___wordWrap;
 	int32_t ___languageDirection;
+	int32_t ___vertexPadding;
 	int32_t ___horizontalAlignment;
 	int32_t ___verticalAlignment;
-	Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B ___color;
+	int32_t ___fontSize;
 	int32_t ___fontStyle;
 	int32_t ___fontWeight;
-	int32_t ___vertexPadding;
+	TextSpanU5BU5D_t5E3335EA0DC1E9CAE42ABA23B1BB679078C9BF1C* ___textSpans;
+	Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B ___color;
 };
 struct NativeTextGenerationSettings_t2F77A4671666C1EB65AADCE42D64244F0168A62A_marshaled_pinvoke
 {
@@ -1850,15 +1853,16 @@ struct NativeTextGenerationSettings_t2F77A4671666C1EB65AADCE42D64244F0168A62A_ma
 	char* ___text;
 	int32_t ___screenWidth;
 	int32_t ___screenHeight;
-	int32_t ___fontSize;
 	int32_t ___wordWrap;
 	int32_t ___languageDirection;
+	int32_t ___vertexPadding;
 	int32_t ___horizontalAlignment;
 	int32_t ___verticalAlignment;
-	Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B ___color;
+	int32_t ___fontSize;
 	int32_t ___fontStyle;
 	int32_t ___fontWeight;
-	int32_t ___vertexPadding;
+	TextSpan_tD088342260A71C10DC0840BCA5D5E28139BA4219* ___textSpans;
+	Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B ___color;
 };
 struct NativeTextGenerationSettings_t2F77A4671666C1EB65AADCE42D64244F0168A62A_marshaled_com
 {
@@ -1867,15 +1871,16 @@ struct NativeTextGenerationSettings_t2F77A4671666C1EB65AADCE42D64244F0168A62A_ma
 	Il2CppChar* ___text;
 	int32_t ___screenWidth;
 	int32_t ___screenHeight;
-	int32_t ___fontSize;
 	int32_t ___wordWrap;
 	int32_t ___languageDirection;
+	int32_t ___vertexPadding;
 	int32_t ___horizontalAlignment;
 	int32_t ___verticalAlignment;
-	Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B ___color;
+	int32_t ___fontSize;
 	int32_t ___fontStyle;
 	int32_t ___fontWeight;
-	int32_t ___vertexPadding;
+	TextSpan_tD088342260A71C10DC0840BCA5D5E28139BA4219* ___textSpans;
+	Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B ___color;
 };
 struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
 {

@@ -13,21 +13,21 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638633529160000000
-    m_Hash: 2041724772
+      ticks: 638641366380000000
+    m_Hash: 1003247611
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: D:/UnityProjects/Homework0/Packages
-m_EditorVersion: 6000.0.21f1 (e2bacb8dee3a)
+m_EditorVersion: 6000.0.22f1 (001fa5a8e29a)
 m_ResolvedPackages:
 - packageId: com.unity.collab-proxy@2.5.2
   testable: 0
   isDirectDependency: 1
   version: 2.5.2
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.collab-proxy
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.collab-proxy@da7e55b87e08
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Version Control
@@ -185,7 +185,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.1
   source: 2
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.feature.2d
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.feature.2d@deb167410795
   assetPath: Packages/com.unity.feature.2d
   name: com.unity.feature.2d
   displayName: 2D
@@ -231,7 +231,7 @@ m_ResolvedPackages:
   - name: com.unity.2d.common
     version: 9.0.6
   - name: com.unity.burst
-    version: 1.8.17
+    version: 1.8.18
   - name: com.unity.mathematics
     version: 1.3.2
   - name: com.unity.modules.jsonserialize
@@ -321,7 +321,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.31
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.ide.rider
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.ide.rider@7921be93db40
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -438,7 +438,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.22
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.ide.visualstudio
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.ide.visualstudio@8140e851d83e
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -544,7 +544,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.11.0
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.inputsystem
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.inputsystem@5a52a5d2c2ed
   assetPath: Packages/com.unity.inputsystem
   name: com.unity.inputsystem
   displayName: Input System
@@ -701,7 +701,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.multiplayer.center
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.multiplayer.center@6628bce149e1
   assetPath: Packages/com.unity.multiplayer.center
   name: com.unity.multiplayer.center
   displayName: Multiplayer Center
@@ -781,7 +781,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 925e4a18964f8b4a601c546a5e4b6ccfcc340115
+  fingerprint: 6628bce149e18eecd6313ed3dcd823e71d4a666a
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.0
@@ -791,7 +791,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 17.0.3
   source: 2
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.render-pipelines.universal
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.render-pipelines.universal@cd3c915f8f4c
   assetPath: Packages/com.unity.render-pipelines.universal
   name: com.unity.render-pipelines.universal
   displayName: Universal RP
@@ -869,7 +869,7 @@ m_ResolvedPackages:
   - name: com.unity.render-pipelines.core
     version: 17.0.3
   - name: com.unity.burst
-    version: 1.8.17
+    version: 1.8.18
   - name: com.unity.mathematics
     version: 1.3.2
   - name: com.unity.modules.jsonserialize
@@ -943,7 +943,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 42a65b5bf328ea4762129247e21ac926e312698a
+  fingerprint: cd3c915f8f4c5944f650342c84cd0999bebafca4
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 17.0.3
@@ -953,7 +953,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.4.5
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.test-framework
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.test-framework@0a21eb82d95c
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -1116,7 +1116,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.8.7
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.timeline
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.timeline@c58b4ee65782
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -1299,7 +1299,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.0
   source: 2
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.ugui
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.ugui@b0e0b1c82856
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -1391,7 +1391,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.9.4
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.visualscripting
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.visualscripting@0920df93f957
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -3923,7 +3923,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.5
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.ext.nunit
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.ext.nunit@60ef35ffd3cd
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
@@ -4002,7 +4002,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.0.3
   source: 2
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.render-pipelines.core
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.render-pipelines.core@7657c7f26638
   assetPath: Packages/com.unity.render-pipelines.core
   name: com.unity.render-pipelines.core
   displayName: Core RP Library
@@ -4144,7 +4144,7 @@ m_ResolvedPackages:
     version: 1.0.1
   resolvedDependencies:
   - name: com.unity.burst
-    version: 1.8.17
+    version: 1.8.18
   - name: com.unity.mathematics
     version: 1.3.2
   - name: com.unity.modules.jsonserialize
@@ -4206,7 +4206,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 406c40df5780fae90015a7d80f68aa8bac4745fd
+  fingerprint: 7657c7f26638908b1d9bb11a9cbe46a2c3324c9a
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 17.0.3
@@ -4216,7 +4216,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.0.3
   source: 2
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.shadergraph
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.shadergraph@1a8087dd3465
   assetPath: Packages/com.unity.shadergraph
   name: com.unity.shadergraph
   displayName: Shader Graph
@@ -4345,7 +4345,7 @@ m_ResolvedPackages:
   - name: com.unity.render-pipelines.core
     version: 17.0.3
   - name: com.unity.burst
-    version: 1.8.17
+    version: 1.8.18
   - name: com.unity.mathematics
     version: 1.3.2
   - name: com.unity.modules.jsonserialize
@@ -4409,7 +4409,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 72019e0052a340d155641282917100aa15a06e77
+  fingerprint: 1a8087dd34652dac7129dd0000d067941828df56
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 17.0.3
@@ -4419,7 +4419,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.0.3
   source: 2
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.render-pipelines.universal-config
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.render-pipelines.universal-config@fa63c96d3e1a
   assetPath: Packages/com.unity.render-pipelines.universal-config
   name: com.unity.render-pipelines.universal-config
   displayName: Universal RP Config
@@ -4445,7 +4445,7 @@ m_ResolvedPackages:
   - name: com.unity.render-pipelines.core
     version: 17.0.3
   - name: com.unity.burst
-    version: 1.8.17
+    version: 1.8.18
   - name: com.unity.mathematics
     version: 1.3.2
   - name: com.unity.modules.jsonserialize
@@ -4517,7 +4517,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 10.1.3
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.animation
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.animation@482d8d36f6a8
   assetPath: Packages/com.unity.2d.animation
   name: com.unity.2d.animation
   displayName: 2D Animation
@@ -4678,7 +4678,7 @@ m_ResolvedPackages:
   - name: com.unity.2d.common
     version: 9.0.6
   - name: com.unity.burst
-    version: 1.8.17
+    version: 1.8.18
   - name: com.unity.mathematics
     version: 1.3.2
   - name: com.unity.modules.jsonserialize
@@ -4765,7 +4765,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 5.0.3
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.pixel-perfect
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.pixel-perfect@e3ae982b672d
   assetPath: Packages/com.unity.2d.pixel-perfect
   name: com.unity.2d.pixel-perfect
   displayName: 2D Pixel Perfect
@@ -4860,7 +4860,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 9.0.3
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.psdimporter
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.psdimporter@676bae148e11
   assetPath: Packages/com.unity.2d.psdimporter
   name: com.unity.2d.psdimporter
   displayName: 2D PSD Importer
@@ -4968,7 +4968,7 @@ m_ResolvedPackages:
   - name: com.unity.2d.common
     version: 9.0.6
   - name: com.unity.burst
-    version: 1.8.17
+    version: 1.8.18
   - name: com.unity.mathematics
     version: 1.3.2
   - name: com.unity.modules.jsonserialize
@@ -5035,7 +5035,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.sprite
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.sprite@b0dd32b64256
   assetPath: Packages/com.unity.2d.sprite
   name: com.unity.2d.sprite
   displayName: 2D Sprite
@@ -5105,7 +5105,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 10.0.6
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.spriteshape
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.spriteshape@bd096f9a5815
   assetPath: Packages/com.unity.2d.spriteshape
   name: com.unity.2d.spriteshape
   displayName: 2D SpriteShape
@@ -5224,7 +5224,7 @@ m_ResolvedPackages:
   - name: com.unity.2d.common
     version: 9.0.6
   - name: com.unity.burst
-    version: 1.8.17
+    version: 1.8.18
   - name: com.unity.mathematics
     version: 1.3.2
   - name: com.unity.modules.jsonserialize
@@ -5295,7 +5295,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.tilemap
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.tilemap@271322772fc5
   assetPath: Packages/com.unity.2d.tilemap
   name: com.unity.2d.tilemap
   displayName: 2D Tilemap Editor
@@ -5372,7 +5372,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: dead75a9883ab9df525e812fcb4e87103a8dc9cf
+  fingerprint: 271322772fc5bd69e3932b349b7134acbc8b33a6
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.0
@@ -5382,7 +5382,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 4.0.2
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.tilemap.extras
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.tilemap.extras@6a6fc3dece59
   assetPath: Packages/com.unity.2d.tilemap.extras
   name: com.unity.2d.tilemap.extras
   displayName: 2D Tilemap Extras
@@ -5525,7 +5525,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.1.6
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.aseprite
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.aseprite@522628f770b9
   assetPath: Packages/com.unity.2d.aseprite
   name: com.unity.2d.aseprite
   displayName: 2D Aseprite Importer
@@ -5570,7 +5570,7 @@ m_ResolvedPackages:
   - name: com.unity.2d.common
     version: 9.0.6
   - name: com.unity.burst
-    version: 1.8.17
+    version: 1.8.18
   - name: com.unity.mathematics
     version: 1.3.2
   - name: com.unity.modules.jsonserialize
@@ -5638,7 +5638,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 4.9.2
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.searcher
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.searcher@90d011a70418
   assetPath: Packages/com.unity.searcher
   name: com.unity.searcher
   displayName: Searcher
@@ -5717,12 +5717,12 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 4.9.2
     minimumUnityVersion: 2019.1.0a1
-- packageId: com.unity.burst@1.8.17
+- packageId: com.unity.burst@1.8.18
   testable: 0
   isDirectDependency: 0
-  version: 1.8.17
+  version: 1.8.18
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.burst
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.burst@616862665d8c
   assetPath: Packages/com.unity.burst
   name: com.unity.burst
   displayName: Burst
@@ -5731,7 +5731,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: assets
+  type: 
   description: Burst is a compiler that translates from IL/.NET bytecode to highly
     optimized native code using LLVM.
   errors: []
@@ -5871,7 +5871,6 @@ m_ResolvedPackages:
     - 1.8.17
     - 1.8.18
     compatible:
-    - 1.8.17
     - 1.8.18
     recommended: 1.8.18
     deprecated: []
@@ -5898,16 +5897,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638573293750000000
+  datePublishedTicks: 638622972693870000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/burst.git
-    revision: 234303811291ae524719609ac4e9ca24be4b58dd
+    revision: 594a8d8794083be96fa510b2deea0954f971ecc9
     path: 
   unityLifecycle:
-    version: 1.8.17
+    version: 1.8.18
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -5917,32 +5916,31 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Added\n\n### Removed\n\n### Changed\n- Improved
-    performance of Burst-compiled code in the Windows x64 Editor by only emitting
-    context-saving code when the code being compiled contains a `throw`\n- Improved
-    error message for pointer-like types in non-`readonly` `static` fields\n\n###
-    Fixed\n- Fixed another compiler crash caused by faulty alias analysis\n- BurstAotSettings
-    files are no longer written to disk unless default settings are changed\n- Fixed
-    the `BurstDebugInformation_DoNotShip` folder not being saved outside the player
-    build folder for Embedded Linux and QNX platforms\n- Fixed direct negation of
-    enums was not correctly promoting the underlying type, causing wrong results.\n-
-    Fixed that `Mathf.Approximately` would return the wrong result approximately
-    all of the time\n- Fixed an issue with default interface methods which would
-    result in compiler errors due to IL corruption.\n- Creating a project with a
-    space in the path would cause burst to fail on windows arm64.\n\n### Known Issues"}'
+  upmReserved: '{"changelog":"### Added\n- Added the `UNITY_BURST_DISABLE_COMPILATION`
+    environment variable as an alternative to the `--burst-disable-compilation` command-line
+    argument\n\n### Removed\n\n### Changed\n\n### Fixed\n- Static fields used in
+    static constructors were sometimes incorrectly set to read only, despite being
+    written.\n- Fixed a case of the editor getting stuck loading during a domain
+    reload if Burst was set to synchronous compilation\n- Fixed hashing bug that
+    could occur when method signatures differed only by generic parameter count\n-
+    Branches within if (cpufeaturesupported) blocks could cause the transform pass
+    to miss identify which blocks are supporting which features, leading to errors
+    at compile time about intrinsics not being in matching blocks.\n- Fixed ''cannot
+    open input file ucrt.lib'' error when building for Universal Windows Platform
+    and targeting SDK 10.0.26100.0\n\n### Known Issues"}'
   assetStore:
     productId: 
-  fingerprint: 3aba14bc08eea56d416846e80adc0dc70d40a448
+  fingerprint: 616862665d8c8ffe643d505aebb5de2ee73b0ab0
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 1.8.17
+    minimumPackageVersion: 1.8.18
     minimumUnityVersion: 2020.3.0a1
 - packageId: com.unity.mathematics@1.3.2
   testable: 0
   isDirectDependency: 0
   version: 1.3.2
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.mathematics
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.mathematics@8017b507cc74
   assetPath: Packages/com.unity.mathematics
   name: com.unity.mathematics
   displayName: Mathematics
@@ -6031,7 +6029,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.4.3
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.collections
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.collections@eba9b2ae55c0
   assetPath: Packages/com.unity.collections
   name: com.unity.collections
   displayName: Collections
@@ -6134,7 +6132,7 @@ m_ResolvedPackages:
     version: 3.0.3
   resolvedDependencies:
   - name: com.unity.burst
-    version: 1.8.17
+    version: 1.8.18
   - name: com.unity.mathematics
     version: 1.3.2
   - name: com.unity.modules.jsonserialize
@@ -6197,7 +6195,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.1
   source: 2
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.rendering.light-transport
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.rendering.light-transport@8e780c06f5c1
   assetPath: Packages/com.unity.rendering.light-transport
   name: com.unity.rendering.light-transport
   displayName: Unity Light Transport Library
@@ -6228,7 +6226,7 @@ m_ResolvedPackages:
   - name: com.unity.collections
     version: 2.4.3
   - name: com.unity.burst
-    version: 1.8.17
+    version: 1.8.18
   - name: com.unity.mathematics
     version: 1.3.2
   - name: com.unity.modules.jsonserialize
@@ -6293,7 +6291,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 9.0.6
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.common
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.2d.common@a819feaf0369
   assetPath: Packages/com.unity.2d.common
   name: com.unity.2d.common
   displayName: 2D Common
@@ -6382,7 +6380,7 @@ m_ResolvedPackages:
     version: 1.0.0
   resolvedDependencies:
   - name: com.unity.burst
-    version: 1.8.17
+    version: 1.8.18
   - name: com.unity.mathematics
     version: 1.3.2
   - name: com.unity.modules.jsonserialize
@@ -6446,7 +6444,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.11.4
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.nuget.mono-cecil
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.nuget.mono-cecil@d6f9955a5d5f
   assetPath: Packages/com.unity.nuget.mono-cecil
   name: com.unity.nuget.mono-cecil
   displayName: Mono Cecil
@@ -6526,7 +6524,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 3.0.3
   source: 1
-  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.test-framework.performance
+  resolvedPath: D:\UnityProjects\Homework0\Library\PackageCache\com.unity.test-framework.performance@fb0dc592af8b
   assetPath: Packages/com.unity.test-framework.performance
   name: com.unity.test-framework.performance
   displayName: Performance testing API
@@ -6656,4 +6654,4 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 3.0.3
     minimumUnityVersion: 2020.3.0a1
-m_BuiltInPackagesHash: beb15fb8377a83d109d1d67ceca1a5dcb85807c1
+m_BuiltInPackagesHash: 9f8647bd9fad995702917c3ea70d73ead5809ee4

@@ -1,4 +1,19 @@
 <linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="GameManager">
+			<method name="ReStart"/>
+			<method name="ShutDown"/>
+			<method name="TurnOffBackground"/>
+			<method name="TurnOnPauseMenu"/>
+		</type>
+		<type fullname="UpgradeWindow">
+			<method name="AttackUpgrade"/>
+			<method name="HPUpgrade"/>
+			<method name="ShovelUpgrade"/>
+			<method name="SickleUpgrade"/>
+			<method name="VelocityUpgrade"/>
+		</type>
+	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime" ignoreIfMissing="1">
 		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerButton">
 			<method name="OnAction"/>

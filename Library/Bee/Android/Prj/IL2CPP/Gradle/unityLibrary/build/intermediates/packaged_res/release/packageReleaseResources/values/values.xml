@@ -7,6 +7,7 @@
     <string name="FreeformWindowSize_maximize"/>
     <string name="FreeformWindowSize_phone"/>
     <string name="FreeformWindowSize_tablet"/>
+    <string name="game_view_content_description">Game view</string>
     <style name="BaseUnityGameActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
     <item name="android:windowBackground">@android:color/black</item>
   </style>

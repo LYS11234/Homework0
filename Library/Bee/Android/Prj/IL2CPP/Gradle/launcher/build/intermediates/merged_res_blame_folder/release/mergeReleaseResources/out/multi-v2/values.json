@@ -95,18 +95,18 @@
                 {
                     "source": "D:\\UnityProjects\\Homework0\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\launcher\\src\\main\\res\\values\\strings.xml",
                     "from": {
-                        "startLines": "2,3",
-                        "startColumns": "2,2",
-                        "startOffsets": "55,101",
-                        "endColumns": "44,65",
-                        "endOffsets": "97,164"
+                        "startLines": "2",
+                        "startColumns": "2",
+                        "startOffsets": "55",
+                        "endColumns": "44",
+                        "endOffsets": "97"
                     },
                     "to": {
-                        "startLines": "663,664",
-                        "startColumns": "4,4",
-                        "startOffsets": "35373,35420",
-                        "endColumns": "46,67",
-                        "endOffsets": "35415,35483"
+                        "startLines": "663",
+                        "startColumns": "4",
+                        "startOffsets": "35373",
+                        "endColumns": "46",
+                        "endOffsets": "35415"
                     }
                 },
                 {
@@ -203,20 +203,20 @@
                 {
                     "source": "D:\\UnityProjects\\Homework0\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\packaged_res\\release\\packageReleaseResources\\values\\values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,12,13,16",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,123,169,226,282,331,377,424,594,686,829",
-                        "endLines": "2,3,4,5,6,7,8,11,12,15,19",
-                        "endColumns": "67,45,56,55,48,45,46,10,91,10,10",
-                        "endOffsets": "118,164,221,277,326,372,419,589,681,824,1053"
+                        "startLines": "2,3,4,5,6,7,8,9,10,13,14,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,123,169,226,282,331,377,424,492,662,754,897",
+                        "endLines": "2,3,4,5,6,7,8,9,12,13,16,20",
+                        "endColumns": "67,45,56,55,48,45,46,67,10,91,10,10",
+                        "endOffsets": "118,164,221,277,326,372,419,487,657,749,892,1121"
                     },
                     "to": {
-                        "startLines": "426,617,630,631,632,633,634,1755,1758,2089,2092",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "20239,32462,33169,33226,33282,33331,33377,105052,105222,130597,130740",
-                        "endLines": "426,617,630,631,632,633,634,1757,1758,2091,2095",
-                        "endColumns": "67,45,56,55,48,45,46,10,91,10,10",
-                        "endOffsets": "20302,32503,33221,33277,33326,33372,33419,105217,105309,130735,130964"
+                        "startLines": "426,617,630,631,632,633,634,664,1755,1758,2089,2092",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "20239,32462,33169,33226,33282,33331,33377,35420,105052,105222,130597,130740",
+                        "endLines": "426,617,630,631,632,633,634,664,1757,1758,2091,2095",
+                        "endColumns": "67,45,56,55,48,45,46,67,10,91,10,10",
+                        "endOffsets": "20302,32503,33221,33277,33326,33372,33419,35483,105217,105309,130735,130964"
                     }
                 }
             ]

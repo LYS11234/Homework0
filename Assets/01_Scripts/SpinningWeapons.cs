@@ -3,21 +3,20 @@ using UnityEngine;
 
 public class SpinningWeapons : MonoBehaviour
 {
-    public float radius;
     public float rotateSpeed;
+    public float additionalRotateSpeed;
 
     private Database database;
 
     private void Start()
     {
-        radius = 0.9f;
         ChangeNumberOfWeapon();
-        database = Database.instance;
+        database = GameManager.instance.database;
     }
     void Update()
     {
 
-        transform.localEulerAngles = new Vector3(0, 0, transform.localEulerAngles.z - Time.deltaTime * rotateSpeed);
+        transform.localEulerAngles = new Vector3(0, 0, transform.localEulerAngles.z - Time.deltaTime * rotateSpeed * additionalRotateSpeed);
         
 
     }

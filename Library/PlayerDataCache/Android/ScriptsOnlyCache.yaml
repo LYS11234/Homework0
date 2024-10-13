@@ -1,10 +1,18 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp:
+    - BoxManager
+    - Enemy
+    - Shovel
     Assembly-CSharp.dll:
+    - Database
     - FloatingJoystick
+    - GameManager
     - InfiniteTilemap
     - PlayerManager
+    - Shovel
     - SpinningWeapons
+    - UpgradeWindow
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
@@ -98,8 +106,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.WhiteBalance
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    Unity.ShaderGraph.Editor.dll:
-    - UnityEditor.ShaderGraph.ShaderGraphProjectSettings
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -130,10 +136,17 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.VerticalLayoutGroup
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
+    Assembly-CSharp:
+    - .SpinningWeapon
     Unity.InputSystem:
     - UnityEngine.InputSystem.InputAction
     - UnityEngine.InputSystem.InputActionMap
@@ -223,6 +236,33 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: UpgradeWindow
+    methodName: ShovelUpgrade
+  - assembly: Assembly-CSharp
+    fullTypeName: UpgradeWindow
+    methodName: VelocityUpgrade
+  - assembly: Assembly-CSharp
+    fullTypeName: UpgradeWindow
+    methodName: SickleUpgrade
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: TurnOnPauseMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: UpgradeWindow
+    methodName: HPUpgrade
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: TurnOffBackground
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: ReStart
+  - assembly: Assembly-CSharp
+    fullTypeName: UpgradeWindow
+    methodName: AttackUpgrade
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: ShutDown
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
     methodName: OnAction
@@ -275,13 +315,25 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
     - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 64
       Script: {instanceID: 0}
     - Class: 70
       Script: {instanceID: 0}
@@ -296,119 +348,129 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 830}
+      Script: {instanceID: 18002}
     - Class: 114
-      Script: {instanceID: 31602}
+      Script: {instanceID: 31446}
     - Class: 114
-      Script: {instanceID: 31876}
+      Script: {instanceID: 31718}
     - Class: 114
-      Script: {instanceID: 31924}
+      Script: {instanceID: 31766}
     - Class: 114
-      Script: {instanceID: 32292}
+      Script: {instanceID: 31778}
     - Class: 114
-      Script: {instanceID: 32410}
+      Script: {instanceID: 32134}
     - Class: 114
-      Script: {instanceID: 32612}
+      Script: {instanceID: 32252}
     - Class: 114
-      Script: {instanceID: 32754}
+      Script: {instanceID: 32454}
     - Class: 114
-      Script: {instanceID: 32878}
+      Script: {instanceID: 32596}
     - Class: 114
-      Script: {instanceID: 33024}
+      Script: {instanceID: 32720}
     - Class: 114
-      Script: {instanceID: 33242}
+      Script: {instanceID: 32866}
     - Class: 114
-      Script: {instanceID: 33610}
+      Script: {instanceID: 33030}
     - Class: 114
-      Script: {instanceID: 33672}
+      Script: {instanceID: 33086}
     - Class: 114
-      Script: {instanceID: 33838}
+      Script: {instanceID: 33176}
     - Class: 114
-      Script: {instanceID: 34080}
+      Script: {instanceID: 33452}
     - Class: 114
-      Script: {instanceID: 34178}
+      Script: {instanceID: 33512}
     - Class: 114
-      Script: {instanceID: 34220}
+      Script: {instanceID: 33676}
     - Class: 114
-      Script: {instanceID: 34276}
+      Script: {instanceID: 33914}
     - Class: 114
-      Script: {instanceID: 34306}
+      Script: {instanceID: 34012}
     - Class: 114
-      Script: {instanceID: 34342}
+      Script: {instanceID: 34050}
     - Class: 114
-      Script: {instanceID: 34752}
+      Script: {instanceID: 34106}
     - Class: 114
-      Script: {instanceID: 35264}
+      Script: {instanceID: 34136}
     - Class: 114
-      Script: {instanceID: 35584}
+      Script: {instanceID: 34172}
     - Class: 114
-      Script: {instanceID: 35594}
+      Script: {instanceID: 34574}
     - Class: 114
-      Script: {instanceID: 36350}
+      Script: {instanceID: 35080}
     - Class: 114
-      Script: {instanceID: 36404}
+      Script: {instanceID: 35398}
     - Class: 114
-      Script: {instanceID: 36692}
+      Script: {instanceID: 35408}
     - Class: 114
-      Script: {instanceID: 36858}
+      Script: {instanceID: 36158}
     - Class: 114
-      Script: {instanceID: 36942}
+      Script: {instanceID: 36212}
     - Class: 114
-      Script: {instanceID: 37042}
+      Script: {instanceID: 36496}
     - Class: 114
-      Script: {instanceID: 37158}
+      Script: {instanceID: 36662}
     - Class: 114
-      Script: {instanceID: 37826}
+      Script: {instanceID: 36746}
     - Class: 114
-      Script: {instanceID: 38036}
+      Script: {instanceID: 36842}
     - Class: 114
-      Script: {instanceID: 38150}
+      Script: {instanceID: 36956}
     - Class: 114
-      Script: {instanceID: 38152}
+      Script: {instanceID: 37614}
     - Class: 114
-      Script: {instanceID: 38422}
+      Script: {instanceID: 37820}
     - Class: 114
-      Script: {instanceID: 39220}
+      Script: {instanceID: 37828}
     - Class: 114
-      Script: {instanceID: 39844}
+      Script: {instanceID: 37926}
     - Class: 114
-      Script: {instanceID: 40882}
+      Script: {instanceID: 37928}
     - Class: 114
-      Script: {instanceID: 41318}
+      Script: {instanceID: 38194}
     - Class: 114
-      Script: {instanceID: 41374}
+      Script: {instanceID: 38974}
     - Class: 114
-      Script: {instanceID: 41660}
+      Script: {instanceID: 39592}
     - Class: 114
-      Script: {instanceID: 41750}
+      Script: {instanceID: 40102}
     - Class: 114
-      Script: {instanceID: 41846}
+      Script: {instanceID: 40614}
     - Class: 114
-      Script: {instanceID: 42404}
+      Script: {instanceID: 41048}
     - Class: 114
-      Script: {instanceID: 42406}
+      Script: {instanceID: 41104}
     - Class: 114
-      Script: {instanceID: 42470}
+      Script: {instanceID: 41388}
     - Class: 114
-      Script: {instanceID: 42512}
+      Script: {instanceID: 41472}
     - Class: 114
-      Script: {instanceID: 42654}
+      Script: {instanceID: 41480}
     - Class: 114
-      Script: {instanceID: 42740}
+      Script: {instanceID: 41570}
     - Class: 114
-      Script: {instanceID: 42768}
+      Script: {instanceID: 42120}
     - Class: 114
-      Script: {instanceID: 42936}
+      Script: {instanceID: 42122}
     - Class: 114
-      Script: {instanceID: 43210}
+      Script: {instanceID: 42184}
     - Class: 114
-      Script: {instanceID: 43536}
+      Script: {instanceID: 42226}
     - Class: 114
-      Script: {instanceID: 43592}
+      Script: {instanceID: 42366}
     - Class: 114
-      Script: {instanceID: 43716}
+      Script: {instanceID: 42452}
     - Class: 114
-      Script: {instanceID: 47524}
+      Script: {instanceID: 42480}
+    - Class: 114
+      Script: {instanceID: 42646}
+    - Class: 114
+      Script: {instanceID: 42920}
+    - Class: 114
+      Script: {instanceID: 43246}
+    - Class: 114
+      Script: {instanceID: 43302}
+    - Class: 114
+      Script: {instanceID: 43424}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -427,12 +489,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    - Class: 156049354
-      Script: {instanceID: 0}
-    - Class: 483693784
-      Script: {instanceID: 0}
-    - Class: 1839735485
-      Script: {instanceID: 0}
   scriptHashData:
   - hash:
       serializedVersion: 2
@@ -440,6 +496,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: UniversalRenderPipelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: f646cd755aeea7df1d84df0ea478357b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UpgradeWindow
   - hash:
       serializedVersion: 2
       Hash: 95c8a8c68e664d4868755f06e7c55997
@@ -572,6 +634,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.UI
     className: InputSystemUIInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 5d87ddd0f51c4422392f61b4f3f7cc99
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameManager
   - hash:
       serializedVersion: 2
       Hash: 8b15e35eb98fc258ec2e839df7c3c9b0
@@ -730,7 +798,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerWidget
   - hash:
       serializedVersion: 2
-      Hash: 4768a6496193d55117f955f071139089
+      Hash: f967a4c15efe684e4b9c04c61016ec78
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: InfiniteTilemap
@@ -784,6 +852,12 @@ ScriptsOnlyBuild:
     className: PlayerInputManager
   - hash:
       serializedVersion: 2
+      Hash: b48408ebe30d5308b76f89492737cd4c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Enemy
+  - hash:
+      serializedVersion: 2
       Hash: 1bc6ff8d02d2d68019aa6a028f8d409d
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -800,6 +874,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.UI
     className: TrackedDeviceRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 7428f0fc7935722eafe2cf30e10f9f8f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BoxManager
   - hash:
       serializedVersion: 2
       Hash: 33656f83bb0079184b2206a69690ec46
@@ -1420,6 +1500,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerVBox
   - hash:
       serializedVersion: 2
+      Hash: 972a42633da107af3ec0e829c52c01df
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Shovel
+  - hash:
+      serializedVersion: 2
       Hash: 215d2dc6ec6ea06728398ea39a103cb3
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.OnScreen
@@ -1684,6 +1770,12 @@ ScriptsOnlyBuild:
     className: Bone
   - hash:
       serializedVersion: 2
+      Hash: 8348f7489afca5a250e379cbdaba40f5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Database
+  - hash:
+      serializedVersion: 2
       Hash: af770ad771658627851c64eafbf797f0
     assemblyName: Unity.2D.Tilemap.Extras
     namespaceName: UnityEngine.Tilemaps
@@ -1856,6 +1948,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: b4ba91e605dc6c04ff43deca590d73a6
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SpinningWeapons
   - hash:
       serializedVersion: 2
       Hash: bfd4af30d9804c73a547e494b337b534
@@ -2074,7 +2172,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerToggle
   - hash:
       serializedVersion: 2
-      Hash: 1fa272290a67d48471a3e46ed4f329c0
+      Hash: 3ff05cf222ca581f3ddc5fea733ab9da
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerManager
@@ -2152,16 +2250,16 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 79793b8c73236ce310faeab2f0b261fa
+      Hash: 9a66bb5bcba6419ffd07f44a296f45cd
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: SpinningWeapons
+    className: Sickle
   - hash:
       serializedVersion: 2
-      Hash: 02a07c01f8cbe3207b0ccbea2d3c5cc1
+      Hash: 840b22b56883efdb4e2649ed0846c3a5
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: Round
+    className: Weapons
   platform: 13
   scenePathNames:
   - Assets/00_Scenes/01_InGame.unity

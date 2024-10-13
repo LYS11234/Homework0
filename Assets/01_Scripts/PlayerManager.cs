@@ -18,14 +18,17 @@ public class PlayerManager : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Database database;
+    public SpinningWeapons shovel;
+    public SpinningWeapons sickle; 
+
     #endregion
 
     #region Variables
     [Header("Variables")]
     public int velocity;
-    [SerializeField]
-    private float currentHp;
-    public float maxHp;
+    public float currentHp;
+
+    public bool isDead;
     #endregion
 
     public RaycastHit2D hit;
@@ -34,9 +37,9 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
-        database = Database.instance;
-        maxHp = database.originHp;
-        currentHp = maxHp;
+        database = GameManager.instance.database;
+
+        currentHp = database.originHp;
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -49,6 +52,8 @@ public class PlayerManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (animator.GetBool("Dead"))
+            return;
         Move();
     }
 
@@ -77,10 +82,10 @@ public class PlayerManager : MonoBehaviour
     {
         if (currentHp > 0)
             return;
+        isDead = true;
+        animator.SetBool("Dead", isDead);
 
-        animator.SetBool("Dead", true);
-
-        
+        GameManager.instance.GameEnd();
     }
 
 }

@@ -9,7 +9,7 @@ public class BoxManager : MonoBehaviour
     private void Start()
     {
         playerManager = PlayerManager.instance;
-        database = Database.instance;
+        database = GameManager.instance.database;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -20,7 +20,7 @@ public class BoxManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = -(playerManager.joystick.Direction * database.originVelocity * database.additionalVelocity * 20);
+        rb.linearVelocity = -(playerManager.joystick.Direction * database.originVelocity * database.additionalVelocity * 20 * playerManager.velocity);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -30,9 +30,9 @@ public class BoxManager : MonoBehaviour
 
         GetComponent<Animator>().enabled = true;
 
-        PlayManager.instance.TurnOnItemReceiveUI();
+        GameManager.instance.TurnOnItemReceiveUI();
         
-        PlayManager.instance.boxPool.Release(gameObject);
+        GameManager.instance.boxPool.Release(gameObject);
         
     }
 }

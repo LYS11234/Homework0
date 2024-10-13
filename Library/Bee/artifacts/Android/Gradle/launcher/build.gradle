@@ -8,7 +8,7 @@ dependencies {
 
 android {
     namespace "com.DefaultCompany.Homework0"
-    ndkPath "D:/UnityVersion/6000.0.21f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK"
+    ndkPath "D:/UnityVersion/6000.0.22f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK"
     ndkVersion "23.1.7779620"
     compileSdk 35
     buildToolsVersion = "34.0.0"

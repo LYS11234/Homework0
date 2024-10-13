@@ -22,7 +22,7 @@ MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\young\.gradl
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\young\.gradle\caches\transforms-3\0574e832f76940327917dce8e1778a2a\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\young\.gradle\caches\transforms-3\76611d920500b973cccb4d152c00ef14\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.9.0] C:\Users\young\.gradle\caches\transforms-3\c919e84cf21a5073ea88f45ff1a29b85\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.games:games-activity:3.0.4] C:\Users\young\.gradle\caches\transforms-3\6ea34da42d24aec8f8000a7c860ca3d7\transformed\jetified-games-activity-3.0.4\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.games:games-activity:3.0.5] C:\Users\young\.gradle\caches\transforms-3\4533d298259fc52a43021fce53f5e4a9\transformed\jetified-games-activity-3.0.5\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.games:games-frame-pacing:1.10.0] C:\Users\young\.gradle\caches\transforms-3\268849a49ea9eb2bba6f4e0ac95bfd63\transformed\jetified-games-frame-pacing-1.10.0\AndroidManifest.xml:1:1-3:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\young\.gradle\caches\transforms-3\dcd0115cb306f25300a8dec488daa2cb\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\young\.gradle\caches\transforms-3\ca632e50827689b4d45330738d8735e2\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
@@ -128,8 +128,8 @@ MERGED from [androidx.customview:customview:1.0.0] C:\Users\young\.gradle\caches
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\young\.gradle\caches\transforms-3\76611d920500b973cccb4d152c00ef14\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.9.0] C:\Users\young\.gradle\caches\transforms-3\c919e84cf21a5073ea88f45ff1a29b85\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.9.0] C:\Users\young\.gradle\caches\transforms-3\c919e84cf21a5073ea88f45ff1a29b85\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.games:games-activity:3.0.4] C:\Users\young\.gradle\caches\transforms-3\6ea34da42d24aec8f8000a7c860ca3d7\transformed\jetified-games-activity-3.0.4\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.games:games-activity:3.0.4] C:\Users\young\.gradle\caches\transforms-3\6ea34da42d24aec8f8000a7c860ca3d7\transformed\jetified-games-activity-3.0.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.games:games-activity:3.0.5] C:\Users\young\.gradle\caches\transforms-3\4533d298259fc52a43021fce53f5e4a9\transformed\jetified-games-activity-3.0.5\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.games:games-activity:3.0.5] C:\Users\young\.gradle\caches\transforms-3\4533d298259fc52a43021fce53f5e4a9\transformed\jetified-games-activity-3.0.5\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.games:games-frame-pacing:1.10.0] C:\Users\young\.gradle\caches\transforms-3\268849a49ea9eb2bba6f4e0ac95bfd63\transformed\jetified-games-frame-pacing-1.10.0\AndroidManifest.xml:2:2-70
 MERGED from [androidx.games:games-frame-pacing:1.10.0] C:\Users\young\.gradle\caches\transforms-3\268849a49ea9eb2bba6f4e0ac95bfd63\transformed\jetified-games-frame-pacing-1.10.0\AndroidManifest.xml:2:2-70
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\young\.gradle\caches\transforms-3\dcd0115cb306f25300a8dec488daa2cb\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44

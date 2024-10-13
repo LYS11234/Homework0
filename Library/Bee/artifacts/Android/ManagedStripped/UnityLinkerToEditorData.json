@@ -252,19 +252,25 @@
           },
           {
             "name": "Mesh",
-            "scenes": [],
+            "scenes": [
+              "Assets/00_Scenes/01_InGame.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MeshFilter",
-            "scenes": [],
+            "scenes": [
+              "Assets/00_Scenes/01_InGame.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MeshRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/00_Scenes/01_InGame.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -358,10 +364,8 @@
           },
           {
             "name": "Renderer",
-            "scenes": [
-              "Assets/00_Scenes/01_InGame.unity"
-            ],
-            "dependencyType": 0,
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
@@ -667,17 +671,9 @@
         "name": "Grid",
         "dependencies": [
           {
-            "name": "Grid",
-            "scenes": [
-              "Assets/00_Scenes/01_InGame.unity"
-            ],
-            "dependencyType": 0,
-            "icon": null
-          },
-          {
             "name": "GridLayout",
             "scenes": [],
-            "dependencyType": 1,
+            "dependencyType": 0,
             "icon": null
           },
           {
@@ -819,7 +815,17 @@
         "dependencies": [
           {
             "name": "Collider",
-            "scenes": [],
+            "scenes": [
+              "Assets/00_Scenes/01_InGame.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "MeshCollider",
+            "scenes": [
+              "Assets/00_Scenes/01_InGame.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -847,7 +853,23 @@
         "name": "Physics2D",
         "dependencies": [
           {
+            "name": "BoxCollider2D",
+            "scenes": [
+              "Assets/00_Scenes/01_InGame.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "CapsuleCollider2D",
+            "scenes": [
+              "Assets/00_Scenes/01_InGame.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "CircleCollider2D",
             "scenes": [
               "Assets/00_Scenes/01_InGame.unity"
             ],
@@ -1232,17 +1254,13 @@
         "dependencies": [
           {
             "name": "Tilemap",
-            "scenes": [
-              "Assets/00_Scenes/01_InGame.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "TilemapRenderer",
-            "scenes": [
-              "Assets/00_Scenes/01_InGame.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },

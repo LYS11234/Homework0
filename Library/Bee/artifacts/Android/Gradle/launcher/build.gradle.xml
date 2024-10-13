@@ -9,7 +9,7 @@
   </element>
   <element name="android" element-id="116" assign-type="None" type="Unity.Android.Gradle.Android" base-type="Unity.Android.Gradle.BaseBlock" is-default="true" dependencies="113">
     <element name="namespace" element-id="117" assign-type="None" property-value="com.DefaultCompany.Homework0" type="Unity.Android.Gradle.PropertyString" base-type="BaseProperty" is-default="true" dependencies="" />
-    <element name="ndkPath" element-id="119" assign-type="None" property-value="D:/UnityVersion/6000.0.21f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK" type="Unity.Android.Gradle.PropertyString" base-type="BaseProperty" is-default="true" dependencies="" />
+    <element name="ndkPath" element-id="119" assign-type="None" property-value="D:/UnityVersion/6000.0.22f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK" type="Unity.Android.Gradle.PropertyString" base-type="BaseProperty" is-default="true" dependencies="" />
     <element name="ndkVersion" element-id="120" assign-type="None" property-value="23.1.7779620" type="Unity.Android.Gradle.PropertyString" base-type="BaseProperty" is-default="true" dependencies="" />
     <element name="compileSdk" element-id="121" assign-type="None" property-value="35" type="Unity.Android.Gradle.PropertyUnsignedInteger" base-type="BaseProperty" is-default="true" dependencies="" />
     <element name="buildToolsVersion" element-id="122" assign-type="Equals" property-value="34.0.0" type="Unity.Android.Gradle.PropertyString" base-type="BaseProperty" is-default="true" dependencies="" />

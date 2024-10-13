@@ -15,7 +15,7 @@ public class InfiniteTilemap : MonoBehaviour
 
     private void Start()
     {
-        database = Database.instance;
+        database = GameManager.instance.database;
         startPosition = Vector2.zero;
         renderer = GetComponent<Renderer>();
         playerManager = PlayerManager.instance;
@@ -23,6 +23,8 @@ public class InfiniteTilemap : MonoBehaviour
 
     void Update()
     {
+        if(playerManager.isDead) return;
+
         if (playerManager.hit)
         {
             playerManager.velocity = 0;

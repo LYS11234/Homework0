@@ -228,10 +228,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.games:games-activity:3.0.4@aar"
-      jars="C:\Users\young\.gradle\caches\transforms-3\6ea34da42d24aec8f8000a7c860ca3d7\transformed\jetified-games-activity-3.0.4\jars\classes.jar"
-      resolved="androidx.games:games-activity:3.0.4"
-      folder="C:\Users\young\.gradle\caches\transforms-3\6ea34da42d24aec8f8000a7c860ca3d7\transformed\jetified-games-activity-3.0.4"
+      name="androidx.games:games-activity:3.0.5@aar"
+      jars="C:\Users\young\.gradle\caches\transforms-3\4533d298259fc52a43021fce53f5e4a9\transformed\jetified-games-activity-3.0.5\jars\classes.jar"
+      resolved="androidx.games:games-activity:3.0.5"
+      folder="C:\Users\young\.gradle\caches\transforms-3\4533d298259fc52a43021fce53f5e4a9\transformed\jetified-games-activity-3.0.5"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"

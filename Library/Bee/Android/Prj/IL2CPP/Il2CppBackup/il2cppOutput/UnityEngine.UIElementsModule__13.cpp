@@ -12689,7 +12689,7 @@ IL_0015_1:
 				V_1 = ((BaseRuntimePanel_tEDFA512CC6692082EBBB87E5DC446A88D2E75DC4*)CastclassClass((RuntimeObject*)L_2, BaseRuntimePanel_tEDFA512CC6692082EBBB87E5DC446A88D2E75DC4_il2cpp_TypeInfo_var));
 				BaseRuntimePanel_tEDFA512CC6692082EBBB87E5DC446A88D2E75DC4* L_3 = V_1;
 				NullCheck(L_3);
-				VirtualActionInvoker0::Invoke(56, L_3);
+				VirtualActionInvoker0::Invoke(57, L_3);
 			}
 
 IL_002b_1:
@@ -33269,7 +33269,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventInterestReflectionUtils_GetDefaultE
 		Type_t* L_4 = ___0_elementType;
 		NullCheck(L_4);
 		Type_t* L_5;
-		L_5 = VirtualFuncInvoker0< Type_t* >::Invoke(108, L_4);
+		L_5 = VirtualFuncInvoker0< Type_t* >::Invoke(109, L_4);
 		V_2 = L_5;
 		Type_t* L_6 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);

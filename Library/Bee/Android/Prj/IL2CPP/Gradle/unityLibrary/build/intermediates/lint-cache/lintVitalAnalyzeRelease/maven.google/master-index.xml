@@ -68,6 +68,7 @@
   <androidx.health.connect/>
   <androidx.heifwriter/>
   <androidx.hilt/>
+  <androidx.ink/>
   <androidx.input/>
   <androidx.interpolator/>
   <androidx.javascriptengine/>

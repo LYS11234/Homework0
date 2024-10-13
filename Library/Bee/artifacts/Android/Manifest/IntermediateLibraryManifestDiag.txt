@@ -1,4 +1,4 @@
-Using template 'D:/UnityVersion/6000.0.21f1/Editor/Data/PlaybackEngines/AndroidPlayer\Apk\UnityManifest.xml'
+Using template 'D:/UnityVersion/6000.0.22f1/Editor/Data/PlaybackEngines/AndroidPlayer\Apk\UnityManifest.xml'
 
 android.hardware.vulkan.version was added because:
 	One of the graphics devices was Vulkan

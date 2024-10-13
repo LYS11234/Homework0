@@ -1266,8 +1266,6 @@ int layout select_dialog_singlechoice_material 0x7f0b0025
 int layout support_simple_spinner_dropdown_item 0x7f0b0026
 int mipmap app_icon 0x7f0c0000
 int mipmap app_icon_round 0x7f0c0001
-int mipmap ic_launcher_background 0x7f0c0002
-int mipmap ic_launcher_foreground 0x7f0c0003
 int string FreeformWindowOrientation_landscape 0x7f0d0000
 int string FreeformWindowOrientation_portrait 0x7f0d0001
 int string FreeformWindowSize_maximize 0x7f0d0002

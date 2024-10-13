@@ -1,21 +1,18 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Shovel : MonoBehaviour
+public class Shovel : Weapons
 {
-    private Database database;
 
-    private void Start()
+    protected override void Update()
     {
-        database = Database.instance;
+        rotationSpeed = database.shovel.additionalAngularVelocity;
+        base.Update();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        bool check = collision.TryGetComponent<EnemyManager>(out EnemyManager enemy);
-        if (!check)
-        {
-            return;
-        }
-        enemy.hp -= database.shovel.damage * database.attack;
+        damage = database.shovel.damage * database.originAttack * database.additionalAttack;
+        base.OnTriggerEnter2D(collision);
     }
 }

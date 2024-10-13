@@ -2,10 +2,24 @@
     "serializedTypes": [],
     "typesInScenes": [
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "BoxManager",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "BuildSettings",
             "fullManagedTypeName": "",
             "moduleName": "Core",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Database",
+            "moduleName": "",
             "usedInScenes": []
         },
         {
@@ -27,6 +41,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "Enemy",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "FloatingJoystick",
             "moduleName": "",
             "usedInScenes": []
@@ -39,6 +60,13 @@
             "usedInScenes": [
                 "Assets/00_Scenes/01_InGame.unity"
             ]
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "GameManager",
+            "moduleName": "",
+            "usedInScenes": []
         },
         {
             "managedAssemblyName": "",
@@ -128,6 +156,13 @@
             "nativeClass": "ShaderNameRegistry",
             "fullManagedTypeName": "",
             "moduleName": "Core",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Shovel",
+            "moduleName": "",
             "usedInScenes": []
         },
         {
@@ -265,6 +300,15 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "BoxCollider2D",
+            "fullManagedTypeName": "UnityEngine.BoxCollider2D",
+            "moduleName": "Physics2D",
+            "usedInScenes": [
+                "Assets/00_Scenes/01_InGame.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Camera",
             "fullManagedTypeName": "UnityEngine.Camera",
             "moduleName": "Core",
@@ -295,6 +339,24 @@
             "nativeClass": "CapsuleCollider2D",
             "fullManagedTypeName": "UnityEngine.CapsuleCollider2D",
             "moduleName": "Physics2D",
+            "usedInScenes": [
+                "Assets/00_Scenes/01_InGame.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "CircleCollider2D",
+            "fullManagedTypeName": "UnityEngine.CircleCollider2D",
+            "moduleName": "Physics2D",
+            "usedInScenes": [
+                "Assets/00_Scenes/01_InGame.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Collider",
+            "fullManagedTypeName": "UnityEngine.Collider",
+            "moduleName": "Physics",
             "usedInScenes": [
                 "Assets/00_Scenes/01_InGame.unity"
             ]
@@ -357,24 +419,6 @@
             ]
         },
         {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Grid",
-            "fullManagedTypeName": "UnityEngine.Grid",
-            "moduleName": "Grid",
-            "usedInScenes": [
-                "Assets/00_Scenes/01_InGame.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "GridLayout",
-            "fullManagedTypeName": "UnityEngine.GridLayout",
-            "moduleName": "Grid",
-            "usedInScenes": [
-                "Assets/00_Scenes/01_InGame.unity"
-            ]
-        },
-        {
             "managedAssemblyName": "Unity.InputSystem.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.InputSystem.InputActionAsset",
@@ -429,6 +473,42 @@
             "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Material",
             "fullManagedTypeName": "UnityEngine.Material",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/00_Scenes/01_InGame.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Mesh",
+            "fullManagedTypeName": "UnityEngine.Mesh",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/00_Scenes/01_InGame.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "MeshCollider",
+            "fullManagedTypeName": "UnityEngine.MeshCollider",
+            "moduleName": "Physics",
+            "usedInScenes": [
+                "Assets/00_Scenes/01_InGame.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "MeshFilter",
+            "fullManagedTypeName": "UnityEngine.MeshFilter",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/00_Scenes/01_InGame.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "MeshRenderer",
+            "fullManagedTypeName": "UnityEngine.MeshRenderer",
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/00_Scenes/01_InGame.unity"
@@ -981,31 +1061,6 @@
             ]
         },
         {
-            "managedAssemblyName": "UnityEngine.TilemapModule.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.Tilemaps.Tile",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Tilemap",
-            "fullManagedTypeName": "UnityEngine.Tilemaps.Tilemap",
-            "moduleName": "Tilemap",
-            "usedInScenes": [
-                "Assets/00_Scenes/01_InGame.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "TilemapRenderer",
-            "fullManagedTypeName": "UnityEngine.Tilemaps.TilemapRenderer",
-            "moduleName": "Tilemap",
-            "usedInScenes": [
-                "Assets/00_Scenes/01_InGame.unity"
-            ]
-        },
-        {
             "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Transform",
             "fullManagedTypeName": "UnityEngine.Transform",
@@ -1123,6 +1178,13 @@
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.VerticalLayoutGroup",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UpgradeWindow",
             "moduleName": "",
             "usedInScenes": []
         }
