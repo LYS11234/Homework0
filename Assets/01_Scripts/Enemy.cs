@@ -1,7 +1,9 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, ISubject
 {
     public float hp;
     public float maxHp;
@@ -10,28 +12,32 @@ public class Enemy : MonoBehaviour
     private float attackterm;
     private float attack;
     private bool isOn;
+    private bool isDead;
 
-    private PlayerManager playerManager;
-    private Database database;
+
+    public PlayerManager playerManager;
+    public Database database;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rig;
-    private BoxCollider2D collider;
+    private BoxCollider2D _collider;
 
     private Vector2 direction;
     private RaycastHit2D hit;
     [SerializeField]
     private LayerMask layerMask;
+
+    private IObserver Observer;
+
     void Start()
     {
         attack = 2;
-        collider = GetComponent<BoxCollider2D>();
-        playerManager = PlayerManager.instance;
-        database = GameManager.instance.database;
-        rig= GetComponent<Rigidbody2D>();
+        _collider = GetComponent<BoxCollider2D>();
+        Spawn();
+        rig = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        Spawn();
+
     }
 
     private void OnEnable()
@@ -45,20 +51,32 @@ public class Enemy : MonoBehaviour
     private void Spawn()
     {
         gameObject.layer = 7;
-        collider.enabled = true;
+        _collider.enabled = true;
         float x = UnityEngine.Random.Range(-10, 10.0f);
         float y = Mathf.Pow(100 - Mathf.Pow(x, 2), 0.5f);
         int minus = UnityEngine.Random.Range(0, 2);
         y *= Mathf.Pow(-1, minus);
         transform.localPosition = new Vector2(x, y);
         hp = maxHp * (1 + database.stage * 0.1f);
+        isDead = false;
     }
     private void FixedUpdate()
     {
-        Move();
+        if(_collider.IsUnityNull())
+        {
+            return;
+        }
         Die();
+        if (animator.GetBool("Dead"))
+        {
+            
+            return;
+        }
+        Move();
+        
         direction = (playerManager.transform.position - transform.position).normalized;
     }
+
 
     private void Update()
     {
@@ -72,6 +90,33 @@ public class Enemy : MonoBehaviour
         else
             attackterm += Time.deltaTime;
 
+    }
+
+    public void RegisterObserver(IObserver observer)
+    {
+        Observer = observer;
+    }
+
+    public void RemoveObserver(IObserver observer)
+    {
+        Observer = null;
+    }
+
+    public void NotifyObservers()
+    {
+        if (!isDead)
+        {
+            Observer.EnemyDead(transform);
+            isDead = true;
+        }
+        if (deleteTime < 3)
+            deleteTime += Time.deltaTime;
+        else
+        {
+            deleteTime = 0;
+            Observer.EnemyRelease(gameObject);
+        }
+        
     }
 
     private void Move()
@@ -92,7 +137,7 @@ public class Enemy : MonoBehaviour
             animator.SetBool("Move", true);
         }
         if(hp > 0)
-            spriteRenderer.flipX = (transform.position.x > playerManager.transform.position.x);
+            spriteRenderer.flipX = (transform.position.x > 0);
     }
 
     public void Damage(float damage)
@@ -104,26 +149,22 @@ public class Enemy : MonoBehaviour
     private void Die()
     {
         if (hp > 0)
+        {
             return;
-        collider.enabled = false;
+        }
+        _collider.enabled = false;
         if (!animator.GetBool("Dead"))
         {
             animator.SetBool("Dead", true);
-            GameManager.instance.currentSpawnCount--;
-        }
-        
-
-        gameObject.layer = 0;
-        
-        if (deleteTime < 3)
-            deleteTime += Time.deltaTime;
-        else
-        {
-            deleteTime = 0;
-            GameManager.instance.BoxDrop(transform.position);
-            GameManager.instance.spawnPool.Release(gameObject);
+            animator.Update(0);
+            
         }
         rig.linearVelocity = -(playerManager.joystick.Direction * database.originVelocity * database.additionalVelocity * 20 * playerManager.velocity);
+
+        gameObject.layer = 0;
+        NotifyObservers();
+
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -131,9 +172,10 @@ public class Enemy : MonoBehaviour
 
         bool canAttack = collision.TryGetComponent<PlayerManager>(out PlayerManager _playerManager);
         if (!canAttack)
+        {
             return;
-
-        playerManager.Damage(attack);
+        }
+        _playerManager.Damage(attack);
         isOn = true;
     }
 
@@ -142,7 +184,10 @@ public class Enemy : MonoBehaviour
     {
         bool canAttack = collision.TryGetComponent<PlayerManager>(out PlayerManager _playerManager);
         if (!canAttack)
+        {
             return;
+        }
+
         isOn = false;
     }
 

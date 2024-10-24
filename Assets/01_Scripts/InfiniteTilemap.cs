@@ -1,11 +1,15 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Tilemaps;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.AddressableAssets;
+using Unity.VisualScripting;
 
 public class InfiniteTilemap : MonoBehaviour
 {
     
-    private Database database;
+    public Database database;
+    [SerializeField]
     private PlayerManager playerManager;
     private new Renderer renderer;
 
@@ -15,21 +19,29 @@ public class InfiniteTilemap : MonoBehaviour
 
     private void Start()
     {
-        database = GameManager.instance.database;
+
         startPosition = Vector2.zero;
         renderer = GetComponent<Renderer>();
-        playerManager = PlayerManager.instance;
     }
 
     void Update()
     {
-        if(playerManager.isDead) return;
+        if(database.IsUnityNull())
+        {
+            return;
+        }
+
+        if (playerManager.isDead)
+        {
+            return;
+        }
 
         if (playerManager.hit)
         {
             playerManager.velocity = 0;
             return; 
         }
+
         playerManager.velocity = 1;
         renderer.material.SetTextureOffset("_MainTex", renderer.material.mainTextureOffset + playerManager.joystick.Direction * database.originVelocity * database.additionalVelocity * Time.deltaTime);
     }

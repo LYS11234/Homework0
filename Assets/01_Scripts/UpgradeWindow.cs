@@ -1,52 +1,76 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using Unity.VisualScripting;
 
-public class UpgradeWindow : MonoBehaviour
+public class UpgradeWindow : MonoBehaviour, ISubject
 {
     [SerializeField]
     private List<Button> upgrades;
-    private Database database;
+    [SerializeField]
+    public Database Database;
     private SpinningWeapons shovel;
     private SpinningWeapons sickle;
-    GameManager gameManager;
-    private PlayerManager playerManager;
+    public PlayerManager playerManager;
+
+    private IObserver observer;
 
     private void Start()
     {
         
+        //NotifyObservers();
     }
 
 
     private void OnEnable()
     {
-        playerManager = PlayerManager.instance;
-        gameManager = GameManager.instance;
-        database = gameManager.database;
+        if (Database.IsUnityNull())
+        {
+            return;
+        }
         shovel = playerManager.shovel;
         sickle = playerManager.sickle;
-        if (database.shovel.level >= 10)
-            upgrades[0].gameObject.SetActive(false);
-        if (database.sickle.level >= 10)
-            upgrades[1].gameObject.SetActive(false);
-        if (database.additionalAttack >= 2)
+
+
+        if (Database.additionalAttack >= 2)
+        {
             upgrades[2].gameObject.SetActive(false);
-        if (database.additionalVelocity >= 2)
+        }
+        if (Database.additionalVelocity >= 2)
+        {
             upgrades[3].gameObject.SetActive(false);
-        if (database.additionalHp >= 2)
+        }
+        if (Database.additionalHp >= 2)
+        {
             upgrades[4].gameObject.SetActive(false);
+        }
+    }
+
+    void OnAssetLoaded(AsyncOperationHandle<Database> obj)
+    {
+        if (obj.Status == AsyncOperationStatus.Succeeded)
+        {
+            Database = obj.Result; // 로드된 자산 인스턴스화
+            
+        }
+        else
+        {
+            Debug.LogError("Failed to load Addressable Asset.");
+        }
     }
 
     public void ShovelUpgrade()
     {
-        ++database.shovel.level;
-        switch (database.shovel.level)
+        ++Database.shovel.level;
+        switch (Database.shovel.level)
         {
             case 2:
-                database.shovel.damage += 0.4f;
+                Database.shovel.damage += 0.4f;
                 break;
             case 3:
-                database.shovel.additionalAngularVelocity += 0.5f;
+                Database.shovel.additionalAngularVelocity += 0.5f;
                 break;
             case 4:
                 GameObject go_shovel_1 = (GameObject)Instantiate(Resources.Load("Shovel"));
@@ -54,10 +78,10 @@ public class UpgradeWindow : MonoBehaviour
                 shovel.ChangeNumberOfWeapon();
                 break;
             case 5:
-                database.shovel.damage += 0.4f;
+                Database.shovel.damage += 0.4f;
                 break;
             case 6:
-                database.shovel.additionalAngularVelocity += 0.5f;
+                Database.shovel.additionalAngularVelocity += 0.5f;
                 break;
             case 7:
                 GameObject go_shovel_2 = (GameObject)Instantiate(Resources.Load("Shovel"));
@@ -65,10 +89,10 @@ public class UpgradeWindow : MonoBehaviour
                 shovel.ChangeNumberOfWeapon();
                 break;
             case 8:
-                database.shovel.damage += 0.4f;
+                Database.shovel.damage += 0.4f;
                 break;
             case 9:
-                database.shovel.additionalAngularVelocity += 0.5f;
+                Database.shovel.additionalAngularVelocity += 0.5f;
                 break;
             case 10:
                 GameObject go_shovel_3 = (GameObject)Instantiate(Resources.Load("Shovel"));
@@ -76,80 +100,96 @@ public class UpgradeWindow : MonoBehaviour
                 shovel.ChangeNumberOfWeapon();
                 break;
             default:
-                Debug.Log("Error!");
+                Database.shovel.damage += 0.05f;
                 break;
         }
-        gameManager.TurnOffBackground();
-        
+        NotifyObservers();
+
     }
 
     public void SickleUpgrade()
     {
-        ++database.sickle.level;
-        switch (database.sickle.level)
+        ++Database.sickle.level;
+        switch (Database.sickle.level)
         {
             case 1:
-                GameObject go_sickle_0 = (GameObject)Instantiate(Resources.Load("Sickle"));
+                GameObject go_sickle_0 = (GameObject)Instantiate(Resources.Load("Shuriken"));
                 go_sickle_0.transform.parent = sickle.transform;
                 sickle.ChangeNumberOfWeapon();
                 break;
             case 2:
-                database.sickle.damage += 0.4f;
+                Database.sickle.damage += 0.4f;
                 break;
             case 3:
-                database.sickle.additionalAngularVelocity += 0.5f;
+                Database.sickle.additionalAngularVelocity += 0.5f;
                 break;
             case 4:
-                GameObject go_sickle_1 = (GameObject)Instantiate(Resources.Load("Sickle"));
+                GameObject go_sickle_1 = (GameObject)Instantiate(Resources.Load("Shuriken"));
                 go_sickle_1.transform.parent = sickle.transform;
                 sickle.ChangeNumberOfWeapon();
                 break;
             case 5:
-                database.sickle.damage += 0.4f;
+                Database.sickle.damage += 0.4f;
                 break;
             case 6:
-                database.sickle.additionalAngularVelocity += 0.5f;
+                Database.sickle.additionalAngularVelocity += 0.5f;
                 break;
             case 7:
-                GameObject go_sickle_2 = (GameObject)Instantiate(Resources.Load("Sickle"));
+                GameObject go_sickle_2 = (GameObject)Instantiate(Resources.Load("Shuriken"));
                 go_sickle_2.transform.parent = sickle.transform;
                 sickle.ChangeNumberOfWeapon();
                 break;
             case 8:
-                database.sickle.damage += 0.4f;
+                Database.sickle.damage += 0.4f;
                 break;
             case 9:
-                database.sickle.additionalAngularVelocity += 0.5f;
+                Database.sickle.additionalAngularVelocity += 0.5f;
                 break;
             case 10:
-                GameObject go_sickle_3 = (GameObject)Instantiate(Resources.Load("Sickle"));
+                GameObject go_sickle_3 = (GameObject)Instantiate(Resources.Load("Shuriken"));
                 go_sickle_3.transform.parent = sickle.transform;
                 sickle.ChangeNumberOfWeapon();
                 break;
             default:
-                Debug.Log("Error!");
+                Database.sickle.damage += 0.05f;
                 break;
         }
 
-        gameManager.TurnOffBackground();
+        NotifyObservers();
     }
 
     public void AttackUpgrade()
     {
-        database.additionalAttack += 0.2f;
-        gameManager.TurnOffBackground();
+        Database.additionalAttack += 0.2f;
+        NotifyObservers();
     }
 
     public void VelocityUpgrade()
     {
-        database.additionalVelocity += 0.2f;
-        gameManager.TurnOffBackground();
+        Database.additionalVelocity += 0.2f;
+        NotifyObservers();
     }
 
     public void HPUpgrade()
     {
-        float nowMax = database.originHp * database.additionalHp;
-        database.additionalHp += 0.2f;
-        playerManager.currentHp += (database.originHp * database.additionalHp - nowMax);
+        float nowMax = Database.originHp * Database.additionalHp;
+        Database.additionalHp += 0.2f;
+        playerManager.currentHp += (Database.originHp * Database.additionalHp - nowMax);
+        NotifyObservers();
+    }
+
+    public void RegisterObserver(IObserver ob)
+    {
+        observer = ob;
+    }
+
+    public void RemoveObserver(IObserver ob)
+    {
+        observer = null;
+    }
+
+    public void NotifyObservers()
+    {
+        observer.TurnOffBackground();
     }
 }

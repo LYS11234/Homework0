@@ -1,21 +1,26 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
-public class BoxManager : MonoBehaviour
+public class BoxManager : MonoBehaviour, ISubject
 {
     private Rigidbody2D rb;
-    private PlayerManager playerManager;
-    private Database database;
+    public PlayerManager playerManager;
+    public Database database;
+    private Animator animator;
+
+    public IObserver Observer;
+
 
     private void Start()
     {
-        playerManager = PlayerManager.instance;
-        database = GameManager.instance.database;
+
         rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnEnable()
     {
-        GetComponent<Animator>().enabled = false;
+        animator = GetComponent<Animator>();
+        animator.enabled = false;
     }
 
     private void FixedUpdate()
@@ -23,16 +28,42 @@ public class BoxManager : MonoBehaviour
         rb.linearVelocity = -(playerManager.joystick.Direction * database.originVelocity * database.additionalVelocity * 20 * playerManager.velocity);
     }
 
+    private void Update()
+    {
+        if(!animator.enabled)
+        {
+            return;
+        }
+        
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.layer != 3)
+        {
             return;
+        }
 
-        GetComponent<Animator>().enabled = true;
+        animator.enabled = true;
+        
+    }
+    public void OpenBox()
+    {
+        NotifyObservers();
+    }
 
-        GameManager.instance.TurnOnItemReceiveUI();
-        
-        GameManager.instance.boxPool.Release(gameObject);
-        
+    public void RegisterObserver(IObserver observer)
+    {
+        Observer = observer;
+    }
+
+    public void RemoveObserver(IObserver observer)
+    {
+        Observer = null;
+    }
+
+    public void NotifyObservers()
+    {
+        Observer.ReleaseBox(gameObject);
     }
 }

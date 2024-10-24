@@ -6,12 +6,13 @@ public class SpinningWeapons : MonoBehaviour
     public float rotateSpeed;
     public float additionalRotateSpeed;
 
-    private Database database;
+    public Database database;
+    public PlayerManager playerManager;
+
 
     private void Start()
     {
         ChangeNumberOfWeapon();
-        database = GameManager.instance.database;
     }
     void Update()
     {
@@ -23,7 +24,7 @@ public class SpinningWeapons : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position = PlayerManager.instance.transform.position;
+        //transform.position = playerManager.transform.position;
     }
 
     public void ChangeNumberOfWeapon()
@@ -34,6 +35,7 @@ public class SpinningWeapons : MonoBehaviour
             GameObject child = transform.GetChild(i).gameObject;
             child.transform.position = Vector3.zero;
             child.transform.localEulerAngles = new Vector3(0, 0, (360 / numOfChild) * i);
+            child.GetComponent<Weapons>().database= database;
         }
     }
 

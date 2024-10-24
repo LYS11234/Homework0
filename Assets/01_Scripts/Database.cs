@@ -12,11 +12,6 @@ public struct SpinningWeapon
 [CreateAssetMenu(fileName = "Database", menuName = "ScriptableObjects/Database", order = 1)]
 public class Database : ScriptableObject
 {
-    public static Database instance;
-
-   
-
-    
     #region Components
 
     #endregion
@@ -32,7 +27,7 @@ public class Database : ScriptableObject
     public float additionalHp;
     public SpinningWeapon shovel;
     public SpinningWeapon sickle;
-
+    #endregion
     public void SetOrigin()
     {
         stage = 1;
@@ -42,6 +37,7 @@ public class Database : ScriptableObject
         additionalAttack = 1;
         originHp = 100;
         additionalHp = 1;
+
         #region Shovel
         shovel = new SpinningWeapon();
         shovel.level = 1;
@@ -58,5 +54,4 @@ public class Database : ScriptableObject
         sickle.additionalAngularVelocity = 1f;
         #endregion
     }
-    #endregion
 }

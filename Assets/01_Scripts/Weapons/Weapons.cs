@@ -3,14 +3,13 @@ using UnityEngine;
 
 public class Weapons : MonoBehaviour
 {
-    protected Database database;
+    public Database database;
     protected float damage;
     protected float rotationSpeed;
 
 
     protected void Start()
     {
-        database = GameManager.instance.database;
     }
 
     protected virtual void Update()

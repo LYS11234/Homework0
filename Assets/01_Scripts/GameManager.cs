@@ -3,83 +3,128 @@ using UnityEngine;
 using UnityEngine.Pool;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using System;
+using System.Collections.Generic;
 
-public class GameManager : MonoBehaviour
+using Random = UnityEngine.Random;
+
+
+
+public class GameManager : MonoBehaviour, IObserver
 {
-    public static GameManager instance;
 
-    private void Awake()
-    {
-        if (instance.IsUnityNull())
-            instance = this;
-        else
-            Destroy(gameObject);
-    }
-
-    public int originSpawnCount;
-    public int currentSpawnCount;
-    private float currentTime;
+    public int OriginSpawnCount;
+    public int CurrentSpawnCount;
+    private float _currentTime;
 
     [SerializeField]
-    private Text timer;
-    public Database database;
-    public ObjectPool<GameObject> spawnPool;
-    public ObjectPool<GameObject> boxPool;
+    private Text _timer;
+
+    public Database Database; //Addressable Asset 사용하면 Resource.Load 보다 나을 것. Streaming Asset에 넣어도 됨.
+    public ObjectPool<GameObject> SpawnPool;
+    public ObjectPool<GameObject> BoxPool;
 
     [SerializeField]
-    private GameObject background;
+    private GameObject _background; 
     [SerializeField]
-    private GameObject itemReceiveMenu;
+    private GameObject _itemReceiveMenu;
     [SerializeField]
-    private GameObject pauseMenu;
+    private GameObject _pauseMenu;
     [SerializeField]
-    private GameObject deadMenu;
+    private GameObject _deadMenu;
     [SerializeField]
-    private GameObject dead;
+    private GameObject _dead;
     [SerializeField]
-    private GameObject survive;
+    private GameObject _survive;
+    
+    private Observer observer;
+
+    [SerializeField]
+    private PlayerManager playerManager;
+
+    [SerializeField]
+    private UpgradeWindow upgradeWindow;
+
+    [SerializeField]
+    private InfiniteTilemap infiniteTilemap;
 
     private void Start()
     {
-        Time.timeScale = 1f;
-        spawnPool = new ObjectPool<GameObject>(Spawn, Respawn, Release);
-        boxPool = new ObjectPool<GameObject>(DropBox, Respawn, Release);
-
-        database.SetOrigin();
+        Addressables.LoadAssetAsync<Database>("Database").Completed += OnAssetLoaded;
+        playerManager.RegisterObserver(this);
+        playerManager.database = Database;
     }
 
     void Update()
     {
-        originSpawnCount = 10 + (int)currentTime / 10;
-        currentTime += Time.deltaTime;
-        timer.text = ((int)currentTime / 60).ToString("D2") + ":" + ((int)currentTime % 60).ToString("D2");
-        if (currentSpawnCount < originSpawnCount)
+        if(BoxPool.IsUnityNull())
         {
-            for (int i = currentSpawnCount; i <= originSpawnCount; i++)
-            {
-                currentSpawnCount++;
-                Enemy enemy = spawnPool.Get().GetComponent<Enemy>();
-            }
-        }
-        if (currentTime / 60 >= database.stage)
-        {
-            database.stage++;
-        }
+            return;
+        }    
 
-        
+        OriginSpawnCount = 10 + (int)_currentTime / 10;
+        _currentTime += Time.deltaTime;
+        _timer.text = ((int)_currentTime / 60).ToString("D2") + ":" + ((int)_currentTime % 60).ToString("D2");
+        if (_currentTime / 60 >= Database.stage)
+        {
+            Database.stage++;
+        }
+        if (CurrentSpawnCount >= OriginSpawnCount)
+        {
+            return;
+        }
+        for (; CurrentSpawnCount < OriginSpawnCount; CurrentSpawnCount++)
+        {
+            if (CurrentSpawnCount >= OriginSpawnCount)
+            {
+                continue;
+            }
+            Enemy enemy = SpawnPool.Get().GetComponent<Enemy>();
+            enemy.playerManager = playerManager;
+            enemy.database = Database;
+            enemy.RegisterObserver(this);
+        }
     }
+
+    #region GetFile
+    void OnAssetLoaded(AsyncOperationHandle<Database> obj)
+    {
+        if (obj.Status == AsyncOperationStatus.Succeeded)
+        {
+            Database = obj.Result; // 로드된 자산 인스턴스화
+
+            Time.timeScale = 1f;
+            SpawnPool = new ObjectPool<GameObject>(Spawn, Respawn, Release);
+            BoxPool = new ObjectPool<GameObject>(DropBox, Respawn, Release);
+            upgradeWindow.RegisterObserver(this);
+            upgradeWindow.playerManager = playerManager;    
+            upgradeWindow.Database = Database;
+            infiniteTilemap.database = Database;
+            Database.SetOrigin();
+        }
+        else
+        {
+            Debug.LogError("Failed to load Addressable Asset.");
+        }
+    }
+
+    #endregion
+
+    #region ObjectPool
 
     public void BoxDrop(Vector2 pos)
     {
         float dropBox = Random.Range(0, 10);
         if (dropBox <= 0f)
         {
-            GameObject box = boxPool.Get();
+            GameObject box = BoxPool.Get();
             box.transform.position = pos;
+            box.GetComponent<BoxManager>().RegisterObserver(this);
         }
     }
 
-    #region Enemy Object Pooling
     public GameObject Spawn()
     {
         int kind = UnityEngine.Random.Range(0, 5);
@@ -115,55 +160,59 @@ public class GameManager : MonoBehaviour
     {
         go.SetActive(true);
     }
-    #endregion
 
-    #region Box Object Pooling
     public GameObject DropBox()
     {
         GameObject go = (GameObject)Resources.Load("Box");
+        BoxManager box = go.GetComponent<BoxManager>();
+        box.database = Database;
+        box.playerManager = playerManager;
+        
+        
         return Instantiate(go);
     }
 
     #endregion
 
+    #region UI
     public void TurnOnItemReceiveUI()
     {
-        itemReceiveMenu.SetActive(true);
+        _itemReceiveMenu.SetActive(true);
         TurnOnBackground();
     }
 
     public void TurnOnPauseMenu()
     {
-        pauseMenu.SetActive(true);
+        _pauseMenu.SetActive(true);
         TurnOnBackground();
     }
 
     public void TurnOnBackground()
     {
-        background.SetActive(true);
+        _background.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void TurnOffBackground()
     {
-        itemReceiveMenu.SetActive(false);
-        pauseMenu.SetActive(false);
-        background.SetActive(false);
+        _itemReceiveMenu.SetActive(false);
+        _pauseMenu.SetActive(false);
+        _background.SetActive(false);
         Time.timeScale = 1f;
     }
 
     public void GameEnd()
     {
         TurnOnBackground();
-        deadMenu.SetActive(true);
-        if (GameManager.instance.currentTime >= 1800f)
+        _deadMenu.SetActive(true);
+        if (_currentTime >= 1800f)
         {
-            dead.SetActive(false);
-            survive.SetActive(true);
+            _dead.SetActive(false);
+            _survive.SetActive(true);
             return;
         }
-        dead.SetActive(true);
-        survive.SetActive(false);
+        _dead.SetActive(true);
+        _survive.SetActive(false);
     }
 
     public void ReStart()
@@ -175,4 +224,34 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    #endregion
+
+
+    #region Observer
+
+    public void PlayerDead()
+    {
+        GameEnd();
+    }
+
+    public void EnemyDead(Transform transform)
+    {
+        --CurrentSpawnCount;
+        BoxDrop(transform.position);
+    }
+
+    public void EnemyRelease(GameObject gameObject)
+    {
+        SpawnPool.Release(gameObject);
+    }
+
+    public void ReleaseBox(GameObject box)
+    {
+       
+        TurnOnItemReceiveUI();
+        BoxPool.Release(box);
+    }
+
+    #endregion
 }
