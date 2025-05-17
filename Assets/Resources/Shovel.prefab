@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea12121f8e6239543b29736aaf681df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  database: {fileID: 11400000, guid: 0bf8f2d4276a6cb41882bb89f81135ff, type: 2}
+  Database: {fileID: 0}
 --- !u!70 &1042576553717881977
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

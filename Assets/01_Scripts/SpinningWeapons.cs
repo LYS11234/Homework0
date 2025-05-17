@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class SpinningWeapons : MonoBehaviour
 {
-    public float rotateSpeed;
-    public float additionalRotateSpeed;
+    public float RotateSpeed;
+    public float AdditionalRotateSpeed;
 
-    public Database database;
-    public PlayerManager playerManager;
+    public Database Database;
+    public PlayerManager PlayerManager;
 
 
     private void Start()
@@ -17,7 +17,7 @@ public class SpinningWeapons : MonoBehaviour
     void Update()
     {
 
-        transform.localEulerAngles = new Vector3(0, 0, transform.localEulerAngles.z - Time.deltaTime * rotateSpeed * additionalRotateSpeed);
+        transform.localEulerAngles = new Vector3(0, 0, transform.localEulerAngles.z - Time.deltaTime * RotateSpeed * AdditionalRotateSpeed);
         
 
     }
@@ -35,7 +35,7 @@ public class SpinningWeapons : MonoBehaviour
             GameObject child = transform.GetChild(i).gameObject;
             child.transform.position = Vector3.zero;
             child.transform.localEulerAngles = new Vector3(0, 0, (360 / numOfChild) * i);
-            child.GetComponent<Weapons>().database= database;
+            child.GetComponent<Weapons>().Database= Database;
         }
     }
 

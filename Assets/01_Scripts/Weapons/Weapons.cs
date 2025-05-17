@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Weapons : MonoBehaviour
 {
-    public Database database;
+    public Database Database;
     protected float damage;
     protected float rotationSpeed;
 
@@ -14,7 +14,7 @@ public class Weapons : MonoBehaviour
 
     protected virtual void Update()
     {
-        GetComponentInParent<SpinningWeapons>().additionalRotateSpeed = rotationSpeed;
+        GetComponentInParent<SpinningWeapons>().AdditionalRotateSpeed = rotationSpeed;
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
@@ -25,6 +25,6 @@ public class Weapons : MonoBehaviour
         {
             return;
         }
-        enemy.hp -= damage;
+        enemy.HP -= damage;
     }
 }

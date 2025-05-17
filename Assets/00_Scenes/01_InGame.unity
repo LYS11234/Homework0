@@ -273,6 +273,116 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155256292}
   m_CullTransparentMesh: 1
+--- !u!1 &217439671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 217439674}
+  - component: {fileID: 217439673}
+  - component: {fileID: 217439672}
+  m_Layer: 0
+  m_Name: Boss_0_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &217439672
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217439671}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ec2c8fd3955068a4d96db78beac0f896, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!212 &217439673
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217439671}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 4720370417469770413, guid: b5c2273fd42e71e46b8e374fc601417a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.28, y: 1.28}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &217439674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217439671}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.97, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &217606452
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,7 +831,7 @@ MonoBehaviour:
   - {fileID: 348539451}
   - {fileID: 1388015627}
   Database: {fileID: 0}
-  playerManager: {fileID: 0}
+  PlayerManager: {fileID: 0}
 --- !u!1 &348539449
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,19 +1010,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f4ff072f9bb8c4baaf81b255c5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OriginSpawnCount: 0
-  CurrentSpawnCount: 0
-  _timer: {fileID: 1012779085}
+  CurrentPosition: {x: 0, y: 0}
+  timer: {fileID: 1012779085}
   Database: {fileID: 11400000, guid: 0bf8f2d4276a6cb41882bb89f81135ff, type: 2}
-  _background: {fileID: 775426884}
-  _itemReceiveMenu: {fileID: 341155574}
-  _pauseMenu: {fileID: 224565355}
-  _deadMenu: {fileID: 957870131}
-  _dead: {fileID: 1175123187}
-  _survive: {fileID: 1330731883}
+  background: {fileID: 775426884}
+  itemReceiveMenu: {fileID: 341155574}
+  pauseMenu: {fileID: 224565355}
+  deadMenu: {fileID: 957870131}
+  dead: {fileID: 1175123187}
+  survive: {fileID: 1330731883}
   playerManager: {fileID: 1482116527}
   upgradeWindow: {fileID: 341155579}
   infiniteTilemap: {fileID: 2028605570}
+  OriginSpawnCount: 10
+  CurrentSpawnCount: 0
 --- !u!1 &502553488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,10 +1683,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aef0c5d196baf245ac47e8304e758b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: -180
-  additionalRotateSpeed: 0
-  database: {fileID: 0}
-  playerManager: {fileID: 0}
+  RotateSpeed: 0
+  AdditionalRotateSpeed: 0
+  Database: {fileID: 0}
+  PlayerManager: {fileID: 0}
 --- !u!224 &644985650
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2384,8 +2495,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -20, y: -20}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -10, y: -10}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1284380755
 MonoBehaviour:
@@ -3090,13 +3201,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387069e674ab88a49b3d557a041bd1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 8170153792378299078}
-  database: {fileID: 0}
-  shovel: {fileID: 1523698963}
-  sickle: {fileID: 644985649}
-  velocity: 0
-  currentHp: 0
-  isDead: 0
+  Joystick: {fileID: 8170153792378299078}
+  Database: {fileID: 0}
+  Shovel: {fileID: 1523698963}
+  Sickle: {fileID: 644985649}
+  Velocity: 0
+  CurrentHp: 0
+  IsDead: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 128
@@ -3222,10 +3333,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aef0c5d196baf245ac47e8304e758b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 180
-  additionalRotateSpeed: 0
-  database: {fileID: 0}
-  playerManager: {fileID: 0}
+  RotateSpeed: 0
+  AdditionalRotateSpeed: 0
+  Database: {fileID: 0}
+  PlayerManager: {fileID: 0}
 --- !u!1 &1602190227
 GameObject:
   m_ObjectHideFlags: 0
@@ -3965,7 +4076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3745b99417cf5ac488e723d5bcbee2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  database: {fileID: 0}
+  Database: {fileID: 0}
   playerManager: {fileID: 1482116527}
 --- !u!1 &2034143815
 GameObject:
@@ -4689,3 +4800,4 @@ SceneRoots:
   - {fileID: 2028605569}
   - {fileID: 1482116525}
   - {fileID: 428076573}
+  - {fileID: 217439674}

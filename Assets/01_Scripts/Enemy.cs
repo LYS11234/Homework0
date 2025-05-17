@@ -5,44 +5,53 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class Enemy : MonoBehaviour, ISubject
 {
-    public float hp;
-    public float maxHp;
+    public float HP;
+    public float MaxHp;
+    [SerializeField]
     private float deleteTime;
-    public float velocity;
+    public float Velocity;
+    [SerializeField]
     private float attackterm;
     private float attack;
+    [SerializeField]
     private bool isOn;
+    [SerializeField]
     private bool isDead;
 
 
-    public PlayerManager playerManager;
-    public Database database;
-    private Animator animator;
+    public PlayerManager PlayerManager;
+    public Database Database;
+    [SerializeField]
+    private Animator Animator;
+    [SerializeField]
     private SpriteRenderer spriteRenderer;
+    [SerializeField]
     private Rigidbody2D rig;
-    private BoxCollider2D _collider;
-
+    [SerializeField]
+    private BoxCollider2D collider;
+    [SerializeField]
     private Vector2 direction;
+    [SerializeField]
     private RaycastHit2D hit;
     [SerializeField]
     private LayerMask layerMask;
-
-    private IObserver Observer;
+    [SerializeField]
+    private IObserver observer;
 
     void Start()
     {
         attack = 2;
-        _collider = GetComponent<BoxCollider2D>();
+        collider = GetComponent<BoxCollider2D>();
         Spawn();
         rig = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        Animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 
     private void OnEnable()
     {
-        if(database.IsUnityNull())
+        if(Database.IsUnityNull())
             return;
         
         Spawn();
@@ -51,30 +60,30 @@ public class Enemy : MonoBehaviour, ISubject
     private void Spawn()
     {
         gameObject.layer = 7;
-        _collider.enabled = true;
+        collider.enabled = true;
         float x = UnityEngine.Random.Range(-10, 10.0f);
         float y = Mathf.Pow(100 - Mathf.Pow(x, 2), 0.5f);
         int minus = UnityEngine.Random.Range(0, 2);
         y *= Mathf.Pow(-1, minus);
         transform.localPosition = new Vector2(x, y);
-        hp = maxHp * (1 + database.stage * 0.1f);
+        HP = MaxHp * (1 + Database.Stage * 0.1f);
         isDead = false;
     }
     private void FixedUpdate()
     {
-        if(_collider.IsUnityNull())
+        if(collider.IsUnityNull())
         {
             return;
         }
         Die();
-        if (animator.GetBool("Dead"))
+        if (Animator.GetBool("Dead"))
         {
             
             return;
         }
         Move();
         
-        direction = (playerManager.transform.position - transform.position).normalized;
+        direction = (PlayerManager.transform.position - transform.position).normalized;
     }
 
 
@@ -84,7 +93,7 @@ public class Enemy : MonoBehaviour, ISubject
             return;
         if (attackterm >= 1f)
         {
-            playerManager.Damage(attack);
+            PlayerManager.Damage(attack);
             attackterm = 0;
         }
         else
@@ -92,21 +101,21 @@ public class Enemy : MonoBehaviour, ISubject
 
     }
 
-    public void RegisterObserver(IObserver observer)
+    public void RegisterObserver(IObserver _observer)
     {
-        Observer = observer;
+        observer = _observer;
     }
 
-    public void RemoveObserver(IObserver observer)
+    public void RemoveObserver(IObserver _observer)
     {
-        Observer = null;
+        observer = null;
     }
 
     public void NotifyObservers()
     {
         if (!isDead)
         {
-            Observer.EnemyDead(transform);
+            observer.EnemyDead(transform);
             isDead = true;
         }
         if (deleteTime < 3)
@@ -114,7 +123,7 @@ public class Enemy : MonoBehaviour, ISubject
         else
         {
             deleteTime = 0;
-            Observer.EnemyRelease(gameObject);
+            observer.EnemyRelease(gameObject);
         }
         
     }
@@ -127,39 +136,39 @@ public class Enemy : MonoBehaviour, ISubject
         
         if (hit)
         {
-            rig.linearVelocity = -(playerManager.joystick.Direction * database.originVelocity * database.additionalVelocity * 20 * playerManager.velocity);
-            animator.SetBool("Move", false);
+            rig.linearVelocity = -(PlayerManager.Joystick.Direction * Database.OriginVelocity * Database.AdditionalVelocity * 20 * PlayerManager.Velocity);
+            Animator.SetBool("Move", false);
             
         }
         else
         {
-            rig.linearVelocity = -(playerManager.joystick.Direction * database.originVelocity * database.additionalVelocity * 20 * playerManager.velocity) + direction * velocity;
-            animator.SetBool("Move", true);
+            rig.linearVelocity = -(PlayerManager.Joystick.Direction * Database.OriginVelocity * Database.AdditionalVelocity * 20 * PlayerManager.Velocity) + direction * Velocity;
+            Animator.SetBool("Move", true);
         }
-        if(hp > 0)
+        if(HP > 0)
             spriteRenderer.flipX = (transform.position.x > 0);
     }
 
-    public void Damage(float damage)
+    public void Damage(float _damage)
     {
-        hp -= damage;
-        animator.SetTrigger("Hit");
+        HP -= _damage;
+        Animator.SetTrigger("Hit");
     }
 
     private void Die()
     {
-        if (hp > 0)
+        if (HP > 0)
         {
             return;
         }
-        _collider.enabled = false;
-        if (!animator.GetBool("Dead"))
+        collider.enabled = false;
+        if (!Animator.GetBool("Dead"))
         {
-            animator.SetBool("Dead", true);
-            animator.Update(0);
+            Animator.SetBool("Dead", true);
+            Animator.Update(0);
             
         }
-        rig.linearVelocity = -(playerManager.joystick.Direction * database.originVelocity * database.additionalVelocity * 20 * playerManager.velocity);
+        rig.linearVelocity = -(PlayerManager.Joystick.Direction * Database.OriginVelocity * Database.AdditionalVelocity * 20 * PlayerManager.Velocity);
 
         gameObject.layer = 0;
         NotifyObservers();
@@ -167,10 +176,10 @@ public class Enemy : MonoBehaviour, ISubject
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D _collision)
     {
 
-        bool canAttack = collision.TryGetComponent<PlayerManager>(out PlayerManager _playerManager);
+        bool canAttack = _collision.TryGetComponent<PlayerManager>(out PlayerManager _playerManager);
         if (!canAttack)
         {
             return;
@@ -180,9 +189,9 @@ public class Enemy : MonoBehaviour, ISubject
     }
 
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D _collision)
     {
-        bool canAttack = collision.TryGetComponent<PlayerManager>(out PlayerManager _playerManager);
+        bool canAttack = _collision.TryGetComponent<PlayerManager>(out PlayerManager _playerManager);
         if (!canAttack)
         {
             return;

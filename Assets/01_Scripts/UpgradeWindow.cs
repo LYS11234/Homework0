@@ -13,7 +13,7 @@ public class UpgradeWindow : MonoBehaviour, ISubject
     public Database Database;
     private SpinningWeapons shovel;
     private SpinningWeapons sickle;
-    public PlayerManager playerManager;
+    public PlayerManager PlayerManager;
 
     private IObserver observer;
 
@@ -30,19 +30,19 @@ public class UpgradeWindow : MonoBehaviour, ISubject
         {
             return;
         }
-        shovel = playerManager.shovel;
-        sickle = playerManager.sickle;
+        shovel = PlayerManager.Shovel;
+        sickle = PlayerManager.Sickle;
 
 
-        if (Database.additionalAttack >= 2)
+        if (Database.AdditionalAttack >= 2)
         {
             upgrades[2].gameObject.SetActive(false);
         }
-        if (Database.additionalVelocity >= 2)
+        if (Database.AdditionalVelocity >= 2)
         {
             upgrades[3].gameObject.SetActive(false);
         }
-        if (Database.additionalHp >= 2)
+        if (Database.AdditionalHp >= 2)
         {
             upgrades[4].gameObject.SetActive(false);
         }
@@ -63,14 +63,14 @@ public class UpgradeWindow : MonoBehaviour, ISubject
 
     public void ShovelUpgrade()
     {
-        ++Database.shovel.level;
-        switch (Database.shovel.level)
+        ++Database.Shovel.Level;
+        switch (Database.Shovel.Level)
         {
             case 2:
-                Database.shovel.damage += 0.4f;
+                Database.Shovel.Damage += 0.4f;
                 break;
             case 3:
-                Database.shovel.additionalAngularVelocity += 0.5f;
+                Database.Shovel.AdditionalAngularVelocity += 0.5f;
                 break;
             case 4:
                 GameObject go_shovel_1 = (GameObject)Instantiate(Resources.Load("Shovel"));
@@ -78,10 +78,10 @@ public class UpgradeWindow : MonoBehaviour, ISubject
                 shovel.ChangeNumberOfWeapon();
                 break;
             case 5:
-                Database.shovel.damage += 0.4f;
+                Database.Shovel.Damage += 0.4f;
                 break;
             case 6:
-                Database.shovel.additionalAngularVelocity += 0.5f;
+                Database.Shovel.AdditionalAngularVelocity += 0.5f;
                 break;
             case 7:
                 GameObject go_shovel_2 = (GameObject)Instantiate(Resources.Load("Shovel"));
@@ -89,10 +89,10 @@ public class UpgradeWindow : MonoBehaviour, ISubject
                 shovel.ChangeNumberOfWeapon();
                 break;
             case 8:
-                Database.shovel.damage += 0.4f;
+                Database.Shovel.Damage += 0.4f;
                 break;
             case 9:
-                Database.shovel.additionalAngularVelocity += 0.5f;
+                Database.Shovel.AdditionalAngularVelocity += 0.5f;
                 break;
             case 10:
                 GameObject go_shovel_3 = (GameObject)Instantiate(Resources.Load("Shovel"));
@@ -100,7 +100,7 @@ public class UpgradeWindow : MonoBehaviour, ISubject
                 shovel.ChangeNumberOfWeapon();
                 break;
             default:
-                Database.shovel.damage += 0.05f;
+                Database.Shovel.Damage += 0.05f;
                 break;
         }
         NotifyObservers();
@@ -109,8 +109,8 @@ public class UpgradeWindow : MonoBehaviour, ISubject
 
     public void SickleUpgrade()
     {
-        ++Database.sickle.level;
-        switch (Database.sickle.level)
+        ++Database.Sickle.Level;
+        switch (Database.Sickle.Level)
         {
             case 1:
                 GameObject go_sickle_0 = (GameObject)Instantiate(Resources.Load("Shuriken"));
@@ -118,10 +118,10 @@ public class UpgradeWindow : MonoBehaviour, ISubject
                 sickle.ChangeNumberOfWeapon();
                 break;
             case 2:
-                Database.sickle.damage += 0.4f;
+                Database.Sickle.Damage += 0.4f;
                 break;
             case 3:
-                Database.sickle.additionalAngularVelocity += 0.5f;
+                Database.Sickle.AdditionalAngularVelocity += 0.5f;
                 break;
             case 4:
                 GameObject go_sickle_1 = (GameObject)Instantiate(Resources.Load("Shuriken"));
@@ -129,10 +129,10 @@ public class UpgradeWindow : MonoBehaviour, ISubject
                 sickle.ChangeNumberOfWeapon();
                 break;
             case 5:
-                Database.sickle.damage += 0.4f;
+                Database.Sickle.Damage += 0.4f;
                 break;
             case 6:
-                Database.sickle.additionalAngularVelocity += 0.5f;
+                Database.Sickle.AdditionalAngularVelocity += 0.5f;
                 break;
             case 7:
                 GameObject go_sickle_2 = (GameObject)Instantiate(Resources.Load("Shuriken"));
@@ -140,10 +140,10 @@ public class UpgradeWindow : MonoBehaviour, ISubject
                 sickle.ChangeNumberOfWeapon();
                 break;
             case 8:
-                Database.sickle.damage += 0.4f;
+                Database.Sickle.Damage += 0.4f;
                 break;
             case 9:
-                Database.sickle.additionalAngularVelocity += 0.5f;
+                Database.Sickle.AdditionalAngularVelocity += 0.5f;
                 break;
             case 10:
                 GameObject go_sickle_3 = (GameObject)Instantiate(Resources.Load("Shuriken"));
@@ -151,7 +151,7 @@ public class UpgradeWindow : MonoBehaviour, ISubject
                 sickle.ChangeNumberOfWeapon();
                 break;
             default:
-                Database.sickle.damage += 0.05f;
+                Database.Sickle.Damage += 0.05f;
                 break;
         }
 
@@ -160,21 +160,21 @@ public class UpgradeWindow : MonoBehaviour, ISubject
 
     public void AttackUpgrade()
     {
-        Database.additionalAttack += 0.2f;
+        Database.AdditionalAttack += 0.2f;
         NotifyObservers();
     }
 
     public void VelocityUpgrade()
     {
-        Database.additionalVelocity += 0.2f;
+        Database.AdditionalVelocity += 0.2f;
         NotifyObservers();
     }
 
     public void HPUpgrade()
     {
-        float nowMax = Database.originHp * Database.additionalHp;
-        Database.additionalHp += 0.2f;
-        playerManager.currentHp += (Database.originHp * Database.additionalHp - nowMax);
+        float nowMax = Database.OriginHp * Database.AdditionalHp;
+        Database.AdditionalHp += 0.2f;
+        PlayerManager.CurrentHp += (Database.OriginHp * Database.AdditionalHp - nowMax);
         NotifyObservers();
     }
 

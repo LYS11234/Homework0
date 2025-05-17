@@ -10,26 +10,26 @@ public class PlayerManager : MonoBehaviour, ISubject
 
     #region Components
     [Header("Components")]
-    public FloatingJoystick joystick;
+    public FloatingJoystick Joystick;
     private Rigidbody2D rigidBody;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-    public Database database;
-    public SpinningWeapons shovel;
-    public SpinningWeapons sickle; 
+    public Database Database;
+    public SpinningWeapons Shovel;
+    public SpinningWeapons Sickle; 
 
 
     #endregion
 
     #region Variables
     [Header("Variables")]
-    public int velocity;
-    public float currentHp;
+    public int Velocity;
+    public float CurrentHp;
 
-    public bool isDead;
+    public bool IsDead;
     #endregion
 
-    public RaycastHit2D hit;
+    public RaycastHit2D Hit;
     [SerializeField]
     private LayerMask layerMask;
 
@@ -58,12 +58,12 @@ public class PlayerManager : MonoBehaviour, ISubject
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        currentHp = database.originHp;
+        CurrentHp = Database.OriginHp;
 
-        shovel.database = database;
-        shovel.playerManager = this;
-        sickle.database = database;
-        sickle.playerManager = this;
+        Shovel.Database = Database;
+        Shovel.PlayerManager = this;
+        Sickle.Database = Database;
+        Sickle.PlayerManager = this;
     }
     //void OnAssetLoaded(AsyncOperationHandle<Database> obj)
     //{
@@ -109,29 +109,29 @@ public class PlayerManager : MonoBehaviour, ISubject
     private void Move()
     {
         //rigidBody.linearVelocity = joystick.Direction * velocity;
-        hit = Physics2D.Raycast(transform.position, joystick.Direction, 0.3f, layerMask);
+        Hit = Physics2D.Raycast(transform.position, Joystick.Direction, 0.3f, layerMask);
 
 
-        spriteRenderer.flipX = joystick.Direction.x < 0;
-        animator.SetBool("Move", joystick.Direction != Vector2.zero);
+        spriteRenderer.flipX = Joystick.Direction.x < 0;
+        animator.SetBool("Move", Joystick.Direction != Vector2.zero);
     }
 
 
     public void Damage(float damage)
     {
         
-        currentHp -= damage;
+        CurrentHp -= damage;
     }
 
     private void Die()
     {
-        if (currentHp > 0)
+        if (CurrentHp > 0)
         {
             return;
         }
 
-        isDead = true;
-        animator.SetBool("Dead", isDead);
+        IsDead = true;
+        animator.SetBool("Dead", IsDead);
         animator.Update(0); //바로 애니메이터에 변환값 적용
 
         NotifyObservers();

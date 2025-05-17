@@ -4,9 +4,9 @@ using UnityEngine.UIElements;
 public class BoxManager : MonoBehaviour, ISubject
 {
     private Rigidbody2D rb;
-    public PlayerManager playerManager;
-    public Database database;
-    private Animator animator;
+    public PlayerManager PlayerManager;
+    public Database Database;
+    private Animator Animator;
 
     public IObserver Observer;
 
@@ -19,18 +19,18 @@ public class BoxManager : MonoBehaviour, ISubject
 
     private void OnEnable()
     {
-        animator = GetComponent<Animator>();
-        animator.enabled = false;
+        Animator = GetComponent<Animator>();
+        Animator.enabled = false;
     }
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = -(playerManager.joystick.Direction * database.originVelocity * database.additionalVelocity * 20 * playerManager.velocity);
+        rb.linearVelocity = -(PlayerManager.Joystick.Direction * Database.OriginVelocity * Database.AdditionalVelocity * 20 * PlayerManager.Velocity);
     }
 
     private void Update()
     {
-        if(!animator.enabled)
+        if(!Animator.enabled)
         {
             return;
         }
@@ -44,7 +44,7 @@ public class BoxManager : MonoBehaviour, ISubject
             return;
         }
 
-        animator.enabled = true;
+        Animator.enabled = true;
         
     }
     public void OpenBox()

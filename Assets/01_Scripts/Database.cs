@@ -3,10 +3,10 @@ using UnityEngine;
 [System.Serializable]
 public struct SpinningWeapon
 {
-    public uint level;
-    public float damage;
-    public float originAngularVelocity;
-    public float additionalAngularVelocity;
+    public uint Level;
+    public float Damage;
+    public float OriginAngularVelocity;
+    public float AdditionalAngularVelocity;
 }
 
 [CreateAssetMenu(fileName = "Database", menuName = "ScriptableObjects/Database", order = 1)]
@@ -18,40 +18,40 @@ public class Database : ScriptableObject
 
     #region Variables
     [Header("Variables")]
-    public float originVelocity;
-    public float additionalVelocity;
-    public float originAttack;
-    public float additionalAttack;
-    public int stage;
-    public float originHp;
-    public float additionalHp;
-    public SpinningWeapon shovel;
-    public SpinningWeapon sickle;
+    public float OriginVelocity;
+    public float AdditionalVelocity;
+    public float OriginAttack;
+    public float AdditionalAttack;
+    public int Stage;
+    public float OriginHp;
+    public float AdditionalHp;
+    public SpinningWeapon Shovel;
+    public SpinningWeapon Sickle;
     #endregion
     public void SetOrigin()
     {
-        stage = 1;
-        originVelocity = 0.2f;
-        additionalVelocity = 1;
-        originAttack = 50;
-        additionalAttack = 1;
-        originHp = 100;
-        additionalHp = 1;
+        Stage = 1;
+        OriginVelocity = 0.2f;
+        AdditionalVelocity = 1;
+        OriginAttack = 50;
+        AdditionalAttack = 1;
+        OriginHp = 100;
+        AdditionalHp = 1;
 
         #region Shovel
-        shovel = new SpinningWeapon();
-        shovel.level = 1;
-        shovel.damage = 1f;
-        shovel.originAngularVelocity = 180;
-        shovel.additionalAngularVelocity = 1f;
+        Shovel = new SpinningWeapon();
+        Shovel.Level = 1;
+        Shovel.Damage = 1f;
+        Shovel.OriginAngularVelocity = 180;
+        Shovel.AdditionalAngularVelocity = 1f;
         #endregion
 
         #region Sickle
-        sickle = new SpinningWeapon();
-        sickle.level = 0;
-        sickle.damage = 1f;
-        sickle.originAngularVelocity = 180;
-        sickle.additionalAngularVelocity = 1f;
+        Sickle = new SpinningWeapon();
+        Sickle.Level = 0;
+        Sickle.Damage = 1f;
+        Sickle.OriginAngularVelocity = 180;
+        Sickle.AdditionalAngularVelocity = 1f;
         #endregion
     }
 }

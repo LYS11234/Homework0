@@ -8,20 +8,21 @@ public interface IObserver
 {
     void PlayerDead();
 
-    void EnemyDead(Transform transform);
+    void EnemyDead(Transform _transform);
 
-    void EnemyRelease(GameObject gameObject);
+    void EnemyRelease(GameObject _gameObject);
 
-    void ReleaseBox(GameObject box);
+    void ReleaseBox(GameObject _box);
 
     void TurnOffBackground();
 
+    void MovePosition(Vector2 _vec);
 }
 
 // 옵저버 등록, 해제, 알림을 위한 인터페이스 정의
 public interface ISubject
 {
-    void RegisterObserver(IObserver observer);
-    void RemoveObserver(IObserver observer);
+    void RegisterObserver(IObserver _observer);
+    void RemoveObserver(IObserver _observer);
     void NotifyObservers();
 }
