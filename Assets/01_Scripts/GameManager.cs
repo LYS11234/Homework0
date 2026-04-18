@@ -1,4 +1,4 @@
-using Unity.VisualScripting;
+ï»¿using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Pool;
 using UnityEngine.SceneManagement;
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour, IObserver
     [SerializeField]
     private Text timer;
 
-    public Database Database; //Addressable Asset »ç¿ëÇÏ¸é Resource.Load º¸´Ù ³ªÀ» °Í. Streaming Asset¿¡ ³Ö¾îµµ µÊ.
+    public Database Database; //Addressable Asset ì‚¬ìš©í•˜ë©´ Resource.Load ë³´ë‹¤ ë‚˜ì„ ê²ƒ. Streaming Assetì— ë„£ì–´ë„ ë¨.
     public ObjectPool<GameObject> SpawnPool;
     public ObjectPool<GameObject> BoxPool;
 
@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour, IObserver
     [SerializeField]
     private GameObject survive;
     
-    private Observer observer;
 
     [SerializeField]
     private PlayerManager playerManager;
@@ -108,7 +107,7 @@ public class GameManager : MonoBehaviour, IObserver
     {
         if (obj.Status == AsyncOperationStatus.Succeeded)
         {
-            Database = obj.Result; // ·ÎµåµÈ ÀÚ»ê ÀÎ½ºÅÏ½ºÈ­
+            Database = obj.Result; // ë¡œë“œëœ ìì‚° ì¸ìŠ¤í„´ìŠ¤í™”
 
             Time.timeScale = 1f;
             SpawnPool = new ObjectPool<GameObject>(Spawn, Respawn, Release);
@@ -118,6 +117,7 @@ public class GameManager : MonoBehaviour, IObserver
             upgradeWindow.Database = Database;
             infiniteTilemap.Database = Database;
             playerManager.Database = Database;
+            playerManager.Ready();
             CurrentPosition = Vector2.zero;
             Database.SetOrigin();
         }

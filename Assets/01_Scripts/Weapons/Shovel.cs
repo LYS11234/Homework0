@@ -3,10 +3,15 @@ using UnityEngine;
 
 public class Shovel : Weapons
 {
-    protected override void Update()
+    public override void SetVelocity()
     {
-        rotationSpeed = Database.Shovel.AdditionalAngularVelocity;
-        base.Update();
+        if (Database.IsUnityNull())
+        {
+            return;
+        }
+        rotationSpeed = Database.Shovel.OriginAngularVelocity;
+        additionalRotationSpeed = Database.Shovel.AdditionalAngularVelocity;
+        base.SetVelocity();
     }
 
     protected override void OnTriggerEnter2D(Collider2D _collision)

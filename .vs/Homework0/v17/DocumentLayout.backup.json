@@ -3,39 +3,11 @@
   "WorkspaceRootPath": "D:\\UnityProjects\\Homework0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\upgradewindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\upgradewindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|d:\\unityprojects\\homework0\\assets\\01_scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\infinitetilemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\infinitetilemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\nosingleton\\observer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\nosingleton\\observer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\nosingleton\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\nosingleton\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\nosingleton\\oberverpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\nosingleton\\oberverpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\weapons\\weapons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|d:\\unityprojects\\homework0\\assets\\01_scripts\\weapons\\weapons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\weapons\\weapons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -47,24 +19,44 @@
       "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\spinningweapons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\weapons\\sickle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\weapons\\sickle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\joystick pack\\scripts\\joysticks\\floatingjoystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\joystick pack\\scripts\\joysticks\\floatingjoystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\boxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\boxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\joystick pack\\scripts\\base\\joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\joystick pack\\scripts\\base\\joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\weapons\\sickle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\weapons\\sickle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\nosingleton\\oberverpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\nosingleton\\oberverpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\upgradewindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\upgradewindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\infinitetilemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\infinitetilemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\01_scripts\\boxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\boxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|D:\\UnityProjects\\Homework0\\assets\\joystick pack\\scripts\\joysticks\\floatingjoystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A87FA-5F6A-0B35-EBD2-2E860930A2B3}|Assembly-CSharp.csproj|solutionrelative:assets\\joystick pack\\scripts\\joysticks\\floatingjoystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,17 +66,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\GameManager.cs",
+              "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\GameManager.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAhwHgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T11:04:36.684Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "PlayerManager.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\PlayerManager.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\PlayerManager.cs",
               "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\PlayerManager.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\PlayerManager.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAswF8AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwEoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-02T07:11:39.289Z",
               "IsPinned": true,
@@ -92,110 +97,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Observer.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\NoSingleton\\Observer.cs",
-              "RelativeDocumentMoniker": "Assets\\01_Scripts\\NoSingleton\\Observer.cs",
-              "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\NoSingleton\\Observer.cs",
-              "RelativeToolTip": "Assets\\01_Scripts\\NoSingleton\\Observer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T14:56:42.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Subject.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\NoSingleton\\Subject.cs",
-              "RelativeDocumentMoniker": "Assets\\01_Scripts\\NoSingleton\\Subject.cs",
-              "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\NoSingleton\\Subject.cs",
-              "RelativeToolTip": "Assets\\01_Scripts\\NoSingleton\\Subject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T14:54:19.175Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "OberverPattern.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\NoSingleton\\OberverPattern.cs",
-              "RelativeDocumentMoniker": "Assets\\01_Scripts\\NoSingleton\\OberverPattern.cs",
-              "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\NoSingleton\\OberverPattern.cs",
-              "RelativeToolTip": "Assets\\01_Scripts\\NoSingleton\\OberverPattern.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T14:48:59.634Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Shovel.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\Weapons\\Shovel.cs",
-              "RelativeDocumentMoniker": "Assets\\01_Scripts\\Weapons\\Shovel.cs",
-              "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\Weapons\\Shovel.cs",
-              "RelativeToolTip": "Assets\\01_Scripts\\Weapons\\Shovel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T11:28:05.512Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "Enemy.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Enemy.cs",
               "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\Enemy.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\Enemy.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAawFUAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAjwEYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T11:22:02.3Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\GameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\01_Scripts\\GameManager.cs",
-              "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\GameManager.cs",
-              "RelativeToolTip": "Assets\\01_Scripts\\GameManager.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAArwLAAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Shovel.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\Weapons\\Shovel.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\Weapons\\Shovel.cs",
+              "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\Weapons\\Shovel.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\Weapons\\Shovel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T11:04:36.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T11:28:05.512Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
               "Title": "Database.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\Database.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Database.cs",
               "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\Database.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\Database.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T17:33:41.375Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "SpinningWeapons.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\SpinningWeapons.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\SpinningWeapons.cs",
               "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\SpinningWeapons.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\SpinningWeapons.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwCgAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T11:41:32.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-02T11:41:32.077Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 6,
               "Title": "Joystick.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\Joystick Pack\\Scripts\\Base\\Joystick.cs",
               "RelativeDocumentMoniker": "Assets\\Joystick Pack\\Scripts\\Base\\Joystick.cs",
@@ -207,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "FloatingJoystick.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\Joystick Pack\\Scripts\\Joysticks\\FloatingJoystick.cs",
               "RelativeDocumentMoniker": "Assets\\Joystick Pack\\Scripts\\Joysticks\\FloatingJoystick.cs",
@@ -219,66 +170,76 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "BoxManager.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\BoxManager.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\BoxManager.cs",
               "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\BoxManager.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\BoxManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAACUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-07T11:46:57.521Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "InfiniteTilemap.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\InfiniteTilemap.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\InfiniteTilemap.cs",
               "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\InfiniteTilemap.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\InfiniteTilemap.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBwAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T05:27:45.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-02T05:27:45.593Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "Weapons.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\Weapons\\Weapons.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Weapons\\Weapons.cs",
               "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\Weapons\\Weapons.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\Weapons\\Weapons.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBEAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T09:50:12.329Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UpgradeWindow.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\UpgradeWindow.cs",
-              "RelativeDocumentMoniker": "Assets\\01_Scripts\\UpgradeWindow.cs",
-              "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\UpgradeWindow.cs",
-              "RelativeToolTip": "Assets\\01_Scripts\\UpgradeWindow.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwDUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T06:35:01.588Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 4,
               "Title": "Sickle.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\Weapons\\Sickle.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Weapons\\Sickle.cs",
               "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\Weapons\\Sickle.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\Weapons\\Sickle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T09:49:39.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OberverPattern.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\NoSingleton\\OberverPattern.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\NoSingleton\\OberverPattern.cs",
+              "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\NoSingleton\\OberverPattern.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\NoSingleton\\OberverPattern.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T14:48:59.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UpgradeWindow.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\UpgradeWindow.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\UpgradeWindow.cs",
+              "ToolTip": "D:\\UnityProjects\\Homework0\\Assets\\01_Scripts\\UpgradeWindow.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\UpgradeWindow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T06:35:01.588Z"
             }
           ]
         }

@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -52,7 +52,7 @@ public class PlayerManager : MonoBehaviour, ISubject
         Observer.PlayerDead();
     }
 
-    private void Start()
+    public void Ready()
     {
         
         rigidBody = GetComponent<Rigidbody2D>();
@@ -69,7 +69,7 @@ public class PlayerManager : MonoBehaviour, ISubject
     //{
     //    if (obj.Status == AsyncOperationStatus.Succeeded)
     //    {
-    //        database = obj.Result; // ·ÎµåµÈ ÀÚ»ê ÀÎ½ºÅÏ½ºÈ­
+    //        database = obj.Result; // ë¡œë“œëœ ìì‚° ì¸ìŠ¤í„´ìŠ¤í™”
             
     //    }
     //    else
@@ -132,7 +132,7 @@ public class PlayerManager : MonoBehaviour, ISubject
 
         IsDead = true;
         animator.SetBool("Dead", IsDead);
-        animator.Update(0); //¹Ù·Î ¾Ö´Ï¸ŞÀÌÅÍ¿¡ º¯È¯°ª Àû¿ë
+        animator.Update(0); //ë°”ë¡œ ì• ë‹ˆë©”ì´í„°ì— ë³€í™˜ê°’ ì ìš©
 
         NotifyObservers();
     }

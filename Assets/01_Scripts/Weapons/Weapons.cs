@@ -5,16 +5,17 @@ public class Weapons : MonoBehaviour
 {
     public Database Database;
     protected float damage;
+    [SerializeField]
     protected float rotationSpeed;
+    [SerializeField] 
+    protected float additionalRotationSpeed;
 
 
-    protected void Start()
+
+    public virtual void SetVelocity()
     {
-    }
-
-    protected virtual void Update()
-    {
-        GetComponentInParent<SpinningWeapons>().AdditionalRotateSpeed = rotationSpeed;
+        GetComponentInParent<SpinningWeapons>().AdditionalRotateSpeed = additionalRotationSpeed;
+        GetComponentInParent<SpinningWeapons>().RotateSpeed = rotationSpeed;
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)

@@ -66,7 +66,9 @@ public class Enemy : MonoBehaviour, ISubject
         int minus = UnityEngine.Random.Range(0, 2);
         y *= Mathf.Pow(-1, minus);
         transform.localPosition = new Vector2(x, y);
+        MaxHp = 10;
         HP = MaxHp * (1 + Database.Stage * 0.1f);
+        Velocity = 3;
         isDead = false;
     }
     private void FixedUpdate()

@@ -10,9 +10,10 @@ public class SpinningWeapons : MonoBehaviour
     public PlayerManager PlayerManager;
 
 
-    private void Start()
+    public void Start()
     {
         ChangeNumberOfWeapon();
+        
     }
     void Update()
     {
@@ -30,12 +31,14 @@ public class SpinningWeapons : MonoBehaviour
     public void ChangeNumberOfWeapon()
     {
         int numOfChild = transform.childCount;
+        
         for (int i = 0; i < numOfChild; i++)
         {
             GameObject child = transform.GetChild(i).gameObject;
             child.transform.position = Vector3.zero;
             child.transform.localEulerAngles = new Vector3(0, 0, (360 / numOfChild) * i);
             child.GetComponent<Weapons>().Database= Database;
+            child.GetComponent<Weapons>().SetVelocity();
         }
     }
 

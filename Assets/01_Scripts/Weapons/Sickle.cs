@@ -3,10 +3,11 @@ using UnityEngine;
 public class Sickle : Weapons
 {
     
-    protected override void Update()
+    public override void SetVelocity()
     {
-        rotationSpeed = Database.Sickle.AdditionalAngularVelocity;
-        base.Update();
+        rotationSpeed = Database.Sickle.OriginAngularVelocity;
+        additionalRotationSpeed = Database.Sickle.AdditionalAngularVelocity;
+        base.SetVelocity();
     }
 
     protected override void OnTriggerEnter2D(Collider2D other)
